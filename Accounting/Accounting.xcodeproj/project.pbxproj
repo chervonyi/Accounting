@@ -12,6 +12,7 @@
 		DAE9B0C7217E6BD300CE67C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE9B0C5217E6BD300CE67C5 /* Main.storyboard */; };
 		DAE9B0C9217E6BD300CE67C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE9B0C8217E6BD300CE67C5 /* Assets.xcassets */; };
 		DAE9B0CC217E6BD300CE67C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE9B0CA217E6BD300CE67C5 /* LaunchScreen.storyboard */; };
+		DAFDE6C2217FA2D200AE8FFF /* EndWorkingDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDE6C1217FA2D200AE8FFF /* EndWorkingDayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		DAE9B0C8217E6BD300CE67C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAE9B0CB217E6BD300CE67C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAE9B0CD217E6BD300CE67C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAFDE6C1217FA2D200AE8FFF /* EndWorkingDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndWorkingDayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				DAE9B0C1217E6BD300CE67C5 /* AppDelegate.swift */,
 				DAE9B0C3217E6BD300CE67C5 /* StartNewWorkingDayViewController.swift */,
+				DAFDE6C1217FA2D200AE8FFF /* EndWorkingDayViewController.swift */,
 				DAE9B0C5217E6BD300CE67C5 /* Main.storyboard */,
 				DAE9B0C8217E6BD300CE67C5 /* Assets.xcassets */,
 				DAE9B0CA217E6BD300CE67C5 /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAFDE6C2217FA2D200AE8FFF /* EndWorkingDayViewController.swift in Sources */,
 				DAE9B0C4217E6BD300CE67C5 /* StartNewWorkingDayViewController.swift in Sources */,
 				DAE9B0C2217E6BD300CE67C5 /* AppDelegate.swift in Sources */,
 			);
