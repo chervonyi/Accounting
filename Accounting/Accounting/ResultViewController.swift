@@ -1,5 +1,5 @@
 //
-//  EndWorkingDayViewController.swift
+//  ResultViewController.swift
 //  Accounting
 //
 //  Created by Yuri Chervonyi on 10/23/18.
@@ -8,15 +8,13 @@
 
 import UIKit
 
-class EndWorkingDayViewController: UIViewController {
+class ResultViewController: UIViewController {
 
     @IBOutlet weak var buttonSubmit: HighlightedBackgroundButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         buttonSubmit.layer.cornerRadius = buttonSubmit.frame.height / 2
     }
-
-
 }

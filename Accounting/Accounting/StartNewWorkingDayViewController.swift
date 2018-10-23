@@ -10,15 +10,12 @@ import UIKit
 
 class StartNewWorkingDayViewController: UIViewController {
 
-    @IBOutlet weak var buttonAgree: UIButton!
-    
-    @IBOutlet weak var buttonStatistics: UIButton!
+    @IBOutlet weak var buttonSubmit: HighlightedBackgroundButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        buttonAgree.layer.cornerRadius = buttonAgree.frame.height / 2
-        
+        buttonSubmit.layer.cornerRadius = buttonSubmit.frame.height / 2
     }
     
 }

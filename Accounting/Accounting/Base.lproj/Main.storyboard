@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EIn-us-QYb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -39,7 +39,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Zg-gB-sIj" customClass="HighlightedBackgroundButton" customModule="Accounting" customModuleProvider="target">
-                                <rect key="frame" x="137" y="564" width="100" height="34"/>
+                                <rect key="frame" x="137.5" y="564" width="100" height="34"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="RR6-qC-aFt"/>
@@ -47,11 +47,6 @@
                                 </constraints>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -67,8 +62,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="buttonAgree" destination="2Zg-gB-sIj" id="8I3-qH-C5X"/>
-                        <outlet property="buttonStatistics" destination="8LU-fw-cQn" id="hQX-78-Inc"/>
+                        <outlet property="buttonSubmit" destination="2Zg-gB-sIj" id="kFE-mA-wMR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -90,7 +84,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RD3-AH-cLM" customClass="HighlightedFontButton" customModule="Accounting" customModuleProvider="target">
-                                <rect key="frame" x="167" y="613" width="42" height="34"/>
+                                <rect key="frame" x="166.5" y="613" width="42" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="0XI-UO-cSU"/>
                                     <constraint firstAttribute="height" constant="34" id="kOU-Gt-1LD"/>
@@ -100,7 +94,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIY-GD-76y" customClass="HighlightedBackgroundButton" customModule="Accounting" customModuleProvider="target">
-                                <rect key="frame" x="137" y="571" width="100" height="34"/>
+                                <rect key="frame" x="137.5" y="571" width="100" height="34"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="Chi-L0-DUp"/>
@@ -108,14 +102,9 @@
                                 </constraints>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="You have been working for 6 hrs 32 min" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Te4-lf-SRQ">
-                                <rect key="frame" x="91" y="362" width="192" height="47"/>
+                                <rect key="frame" x="91" y="362" width="192" height="23.5"/>
                                 <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="18"/>
                                 <color key="textColor" red="0.38511981865284972" green="0.38511981865284972" blue="0.38511981865284972" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -136,10 +125,65 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="y1k-aR-mbM"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonSubmit" destination="PIY-GD-76y" id="wEI-xd-dUy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuY-j2-nam" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="789.60000000000002" y="33.733133433283363"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="ydx-y4-fnS">
+            <objects>
+                <viewController id="EIn-us-QYb" customClass="ResultViewController" customModule="Accounting" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DRk-gY-fVu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="$82.32" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONq-3Q-pfN">
+                                <rect key="frame" x="72.5" y="294.5" width="230" height="78"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="HP5-yC-wPO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="60"/>
+                                <color key="textColor" red="0.26503805051813467" green="0.26503805051813467" blue="0.26503805051813467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPX-Wo-Its" customClass="HighlightedBackgroundButton" customModule="Accounting" customModuleProvider="target">
+                                <rect key="frame" x="137.5" y="613" width="100" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="z5Y-lz-jLi"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="OK"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Result for today:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j87-bZ-4tl">
+                                <rect key="frame" x="111" y="235.5" width="153" height="29"/>
+                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TPX-Wo-Its" firstAttribute="centerX" secondItem="DRk-gY-fVu" secondAttribute="centerX" id="W51-CR-aVn"/>
+                            <constraint firstItem="ONq-3Q-pfN" firstAttribute="centerY" secondItem="DRk-gY-fVu" secondAttribute="centerY" id="a4p-30-3lZ"/>
+                            <constraint firstItem="ONq-3Q-pfN" firstAttribute="centerX" secondItem="DRk-gY-fVu" secondAttribute="centerX" id="bFu-rX-eiH"/>
+                            <constraint firstItem="Cae-R5-aAC" firstAttribute="bottom" secondItem="TPX-Wo-Its" secondAttribute="bottom" constant="20" id="ebz-0K-Rd5"/>
+                            <constraint firstItem="ONq-3Q-pfN" firstAttribute="top" secondItem="j87-bZ-4tl" secondAttribute="bottom" constant="30" id="fMP-DC-lBl"/>
+                            <constraint firstItem="j87-bZ-4tl" firstAttribute="centerX" secondItem="DRk-gY-fVu" secondAttribute="centerX" id="fV3-ya-SEK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Cae-R5-aAC"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonSubmit" destination="TPX-Wo-Its" id="Jew-yN-gbc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dnd-Ob-p6L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1590" y="34"/>
         </scene>
     </scenes>
 </document>
