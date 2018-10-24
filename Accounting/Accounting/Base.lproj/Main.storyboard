@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EIn-us-QYb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y9k-kB-w6h">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -104,7 +104,10 @@
                                 <state key="normal" title="YES"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="You have been working for 6 hrs 32 min" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Te4-lf-SRQ">
-                                <rect key="frame" x="91" y="362" width="192" height="23.5"/>
+                                <rect key="frame" x="91" y="362" width="192" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="cj5-mp-lk1"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="18"/>
                                 <color key="textColor" red="0.38511981865284972" green="0.38511981865284972" blue="0.38511981865284972" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -132,6 +135,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuY-j2-nam" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="789.60000000000002" y="33.733133433283363"/>
+        </scene>
+        <!--Break Duration View Controller-->
+        <scene sceneID="rru-XY-LUb">
+            <objects>
+                <viewController id="Y9k-kB-w6h" customClass="BreakDurationViewController" customModule="Accounting" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xAS-e3-aVd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q07-b3-TgK" customClass="HighlightedFontButton" customModule="Accounting" customModuleProvider="target">
+                                <rect key="frame" x="166.5" y="613" width="42" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="NzS-r7-Dma"/>
+                                    <constraint firstAttribute="height" constant="34" id="hck-N8-cJk"/>
+                                </constraints>
+                                <state key="normal" title="Later">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTA-e5-nQJ" customClass="HighlightedBackgroundButton" customModule="Accounting" customModuleProvider="target">
+                                <rect key="frame" x="137.5" y="571" width="100" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="6jS-G2-dmY"/>
+                                    <constraint firstAttribute="height" constant="34" id="ct3-Yg-6oe"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="YES"/>
+                                <connections>
+                                    <action selector="onSubmit:" destination="Y9k-kB-w6h" eventType="touchUpInside" id="u9h-hy-Fwb"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npW-Su-VdY">
+                                <rect key="frame" x="27.5" y="226" width="320" height="216"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.87492262556690659" green="0.73251206617840126" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Break duration" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fv1-wC-nKy">
+                                <rect key="frame" x="108.5" y="185.5" width="158" height="32.5"/>
+                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="npW-Su-VdY" firstAttribute="centerX" secondItem="xAS-e3-aVd" secondAttribute="centerX" id="DQc-ls-tRz"/>
+                            <constraint firstItem="Q07-b3-TgK" firstAttribute="top" secondItem="KTA-e5-nQJ" secondAttribute="bottom" constant="8" id="XJ3-Bw-EkN"/>
+                            <constraint firstItem="npW-Su-VdY" firstAttribute="centerY" secondItem="xAS-e3-aVd" secondAttribute="centerY" id="XLf-zE-gbs"/>
+                            <constraint firstItem="npW-Su-VdY" firstAttribute="top" secondItem="fv1-wC-nKy" secondAttribute="bottom" constant="8" id="YiF-Hi-svb"/>
+                            <constraint firstItem="qLg-fW-OTr" firstAttribute="bottom" secondItem="Q07-b3-TgK" secondAttribute="bottom" constant="20" id="gcD-OV-uxg"/>
+                            <constraint firstItem="fv1-wC-nKy" firstAttribute="centerX" secondItem="qLg-fW-OTr" secondAttribute="centerX" id="mEv-JN-KQH"/>
+                            <constraint firstItem="KTA-e5-nQJ" firstAttribute="centerX" secondItem="xAS-e3-aVd" secondAttribute="centerX" id="s1h-ru-SIX"/>
+                            <constraint firstItem="Q07-b3-TgK" firstAttribute="centerX" secondItem="xAS-e3-aVd" secondAttribute="centerX" id="twd-1i-Gzc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qLg-fW-OTr"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonSubmit" destination="KTA-e5-nQJ" id="Goh-fP-IMb"/>
+                        <outlet property="durationPicker" destination="npW-Su-VdY" id="ztS-42-MnL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9x7-P8-CoF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1512.8" y="32.833583208395808"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="ydx-y4-fnS">
@@ -183,7 +252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dnd-Ob-p6L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1590" y="34"/>
+            <point key="canvasLocation" x="2242" y="33"/>
         </scene>
     </scenes>
 </document>
