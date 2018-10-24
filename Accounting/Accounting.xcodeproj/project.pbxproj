@@ -15,6 +15,7 @@
 		DAFDE6C2217FA2D200AE8FFF /* EndWorkingDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDE6C1217FA2D200AE8FFF /* EndWorkingDayViewController.swift */; };
 		DAFDE6C4217FBF6500AE8FFF /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDE6C3217FBF6500AE8FFF /* ResultViewController.swift */; };
 		DAFDE6C8217FDFC700AE8FFF /* BreakDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDE6C7217FDFC700AE8FFF /* BreakDurationViewController.swift */; };
+		DAFDE6CA218027EB00AE8FFF /* StatisticsDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDE6C9218027EB00AE8FFF /* StatisticsDayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +28,8 @@
 		DAE9B0CD217E6BD300CE67C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAFDE6C1217FA2D200AE8FFF /* EndWorkingDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndWorkingDayViewController.swift; sourceTree = "<group>"; };
 		DAFDE6C3217FBF6500AE8FFF /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		DAFDE6C7217FDFC700AE8FFF /* BreakDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BreakDurationViewController.swift; path = Accounting/BreakDurationViewController.swift; sourceTree = "<group>"; };
+		DAFDE6C7217FDFC700AE8FFF /* BreakDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakDurationViewController.swift; sourceTree = "<group>"; };
+		DAFDE6C9218027EB00AE8FFF /* StatisticsDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsDayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +46,6 @@
 		DAE9B0B5217E6BD300CE67C5 = {
 			isa = PBXGroup;
 			children = (
-				DAFDE6C7217FDFC700AE8FFF /* BreakDurationViewController.swift */,
 				DAE9B0C0217E6BD300CE67C5 /* Accounting */,
 				DAE9B0BF217E6BD300CE67C5 /* Products */,
 			);
@@ -61,6 +62,8 @@
 		DAE9B0C0217E6BD300CE67C5 /* Accounting */ = {
 			isa = PBXGroup;
 			children = (
+				DAFDE6C9218027EB00AE8FFF /* StatisticsDayViewController.swift */,
+				DAFDE6C7217FDFC700AE8FFF /* BreakDurationViewController.swift */,
 				DAE9B0C1217E6BD300CE67C5 /* AppDelegate.swift */,
 				DAFDE6C3217FBF6500AE8FFF /* ResultViewController.swift */,
 				DAE9B0C3217E6BD300CE67C5 /* StartNewWorkingDayViewController.swift */,
@@ -149,6 +152,7 @@
 				DAE9B0C4217E6BD300CE67C5 /* StartNewWorkingDayViewController.swift in Sources */,
 				DAFDE6C8217FDFC700AE8FFF /* BreakDurationViewController.swift in Sources */,
 				DAE9B0C2217E6BD300CE67C5 /* AppDelegate.swift in Sources */,
+				DAFDE6CA218027EB00AE8FFF /* StatisticsDayViewController.swift in Sources */,
 				DAFDE6C4217FBF6500AE8FFF /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
