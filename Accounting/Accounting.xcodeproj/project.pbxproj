@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA3B38FB21823F180056486B /* DurationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B38FA21823F180056486B /* DurationPickerView.swift */; };
 		DAE9B0C2217E6BD300CE67C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE9B0C1217E6BD300CE67C5 /* AppDelegate.swift */; };
 		DAE9B0C4217E6BD300CE67C5 /* StartNewWorkingDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE9B0C3217E6BD300CE67C5 /* StartNewWorkingDayViewController.swift */; };
 		DAE9B0C7217E6BD300CE67C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE9B0C5217E6BD300CE67C5 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA3B38FA21823F180056486B /* DurationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationPickerView.swift; sourceTree = "<group>"; };
 		DAE9B0BE217E6BD300CE67C5 /* Accounting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Accounting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE9B0C1217E6BD300CE67C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAE9B0C3217E6BD300CE67C5 /* StartNewWorkingDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartNewWorkingDayViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				DAE9B0C8217E6BD300CE67C5 /* Assets.xcassets */,
 				DAE9B0CA217E6BD300CE67C5 /* LaunchScreen.storyboard */,
 				DAE9B0CD217E6BD300CE67C5 /* Info.plist */,
+				DA3B38FA21823F180056486B /* DurationPickerView.swift */,
 			);
 			path = Accounting;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA3B38FB21823F180056486B /* DurationPickerView.swift in Sources */,
 				DAFDE6C2217FA2D200AE8FFF /* EndWorkingDayViewController.swift in Sources */,
 				DAE9B0C4217E6BD300CE67C5 /* StartNewWorkingDayViewController.swift in Sources */,
 				DAFDE6C8217FDFC700AE8FFF /* BreakDurationViewController.swift in Sources */,

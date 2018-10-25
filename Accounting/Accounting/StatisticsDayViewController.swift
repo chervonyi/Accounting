@@ -15,11 +15,15 @@ class StatisticsDayViewController: UIViewController {
     @IBOutlet weak var inputTextOut: UITextField!
     
     private var timePicker = UIDatePicker()
-    private var durationPicker = DurationPicker()
+    private var durationPicker = DurationPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Settings for both types of pickers
+        timePicker.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        timePicker.datePickerMode = .time
+        durationPicker.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         durationPicker.delegate = durationPicker
         durationPicker.dataSource = durationPicker
         
@@ -31,11 +35,10 @@ class StatisticsDayViewController: UIViewController {
         tieUpDoneButton(for: inputTextBreak)
         tieUpDoneButton(for: inputTextOut)
         
-        timePicker.datePickerMode = .time
-        
+        // Set pickers
         inputTextIn.inputView = timePicker
-        inputTextBreak.inputView = durationPicker
         inputTextOut.inputView = timePicker
+        inputTextBreak.inputView = durationPicker
     }
     
     func tieUpDoneButton(for textField: UITextField) {
