@@ -15,20 +15,27 @@ class StatisticsDayViewController: UIViewController {
     @IBOutlet weak var inputTextOut: UITextField!
     
     private var timePicker = UIDatePicker()
+    private var durationPicker = DurationPicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        durationPicker.delegate = durationPicker
+        durationPicker.dataSource = durationPicker
+        
         // Removing picker on usual tap
         let tapGesure = UITapGestureRecognizer(target: self, action: #selector(StatisticsDayViewController.viewTaped(gestureRecognizer:)))
         view.addGestureRecognizer(tapGesure)
         
         tieUpDoneButton(for: inputTextIn)
+        tieUpDoneButton(for: inputTextBreak)
         tieUpDoneButton(for: inputTextOut)
         
         timePicker.datePickerMode = .time
-        inputTextOut.inputView = timePicker
+        
         inputTextIn.inputView = timePicker
+        inputTextBreak.inputView = durationPicker
+        inputTextOut.inputView = timePicker
     }
     
     func tieUpDoneButton(for textField: UITextField) {
@@ -36,10 +43,16 @@ class StatisticsDayViewController: UIViewController {
         toolBar.sizeToFit()
         
         let doneButton: UIBarButtonItem
-        if textField == inputTextIn {
-            doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(timeChangedIn))
-        } else {
-            doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(timeChangedOut))
+        
+        switch textField {
+        case inputTextIn: doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(timeChangedIn))
+            
+        case inputTextBreak: doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(durationChanged))
+            
+        case inputTextOut: doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(timeChangedOut))
+            
+        default:
+            doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
         }
         
         toolBar.setItems([doneButton], animated: true)
@@ -52,6 +65,11 @@ class StatisticsDayViewController: UIViewController {
     
     @objc func timeChangedIn() {
         inputTextIn.text = getSelectedTime()
+        view.endEditing(true)
+    }
+    
+    @objc func durationChanged() {
+        inputTextBreak.text = durationPicker.selectedItem
         view.endEditing(true)
     }
     

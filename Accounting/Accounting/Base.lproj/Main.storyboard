@@ -167,7 +167,7 @@
                                     <action selector="onSubmit:" destination="Y9k-kB-w6h" eventType="touchUpInside" id="u9h-hy-Fwb"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npW-Su-VdY">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npW-Su-VdY" customClass="DurationPicker" customModule="Accounting" customModuleProvider="target">
                                 <rect key="frame" x="27.5" y="226" width="320" height="216"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.87492262556690659" green="0.73251206617840126" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -195,7 +195,7 @@
                     </view>
                     <connections>
                         <outlet property="buttonSubmit" destination="KTA-e5-nQJ" id="Goh-fP-IMb"/>
-                        <outlet property="durationPicker" destination="npW-Su-VdY" id="ztS-42-MnL"/>
+                        <outlet property="durationPicker" destination="npW-Su-VdY" id="Rpd-lO-luG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9x7-P8-CoF" userLabel="First Responder" sceneMemberID="firstResponder"/>

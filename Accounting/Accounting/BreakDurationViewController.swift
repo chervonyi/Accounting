@@ -8,40 +8,32 @@
 
 import UIKit
 
-class BreakDurationViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-    
-    var selectedItem: String?
-    
-    var pickerData: [String] = [String]()
+class BreakDurationViewController: UIViewController {
     
     @IBOutlet weak var buttonSubmit: UIButton!
-    @IBOutlet weak var durationPicker: UIPickerView!
-    
+    @IBOutlet weak var durationPicker: DurationPicker!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         buttonSubmit.layer.cornerRadius = buttonSubmit.frame.height / 2
         
         // Picker vars and info
-        selectedItem = nil
-        durationPicker.delegate = self
-        durationPicker.dataSource = self
-        fillPickerData()
-    }
-    
-    func fillPickerData() {
-        for i in 0..<60 {
-            pickerData.append("\(i) min")
-        }
-        pickerData.append("1 hour")
+        durationPicker.delegate = durationPicker
+        durationPicker.dataSource = durationPicker
     }
     
     @IBAction func onSubmit(_ sender: UIButton) {
-        if selectedItem != nil {
-            print(selectedItem!)
-        }
+        print(durationPicker.selectedItem)
     }
+}
+
+class DurationPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    lazy private(set) var pickerData = getDataSrouce()
+    
+    lazy private(set) var selectedItem = pickerData[0]
+
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -58,5 +50,13 @@ class BreakDurationViewController: UIViewController, UIPickerViewDelegate, UIPic
         selectedItem = pickerData[row]
     }
     
-    
+    func getDataSrouce() -> [String] {
+        var data = [String]()
+        for i in 0..<60 {
+            data.append("\(i) min")
+        }
+        data.append("1 hour")
+        return data
+    }
 }
+
