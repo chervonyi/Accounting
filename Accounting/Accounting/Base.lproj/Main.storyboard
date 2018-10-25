@@ -254,10 +254,10 @@
             </objects>
             <point key="canvasLocation" x="2242" y="33"/>
         </scene>
-        <!--View Controller-->
+        <!--Statistics Day View Controller-->
         <scene sceneID="SUb-yk-Zq1">
             <objects>
-                <viewController id="YmN-vE-VaZ" sceneMemberID="viewController">
+                <viewController id="YmN-vE-VaZ" customClass="StatisticsDayViewController" customModule="Accounting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K1K-wa-1qO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -365,6 +365,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KBV-Qv-M1k"/>
                     </view>
+                    <connections>
+                        <outlet property="inputTextBreak" destination="aTt-vH-pKr" id="EWM-oH-cSl"/>
+                        <outlet property="inputTextIn" destination="cxG-av-vdC" id="7oj-d7-uQt"/>
+                        <outlet property="inputTextOut" destination="XBX-Me-f8L" id="AoW-NB-cgI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4bm-BL-UZ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
