@@ -17,6 +17,8 @@ class StatisticsDayViewController: UIViewController {
     private var timePicker = UIDatePicker()
     private var durationPicker = DurationPickerView()
     
+    private(set) var calendar = IncomeCalendar()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
