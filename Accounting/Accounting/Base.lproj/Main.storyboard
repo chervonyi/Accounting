@@ -369,6 +369,9 @@
                         <outlet property="inputTextBreak" destination="aTt-vH-pKr" id="EWM-oH-cSl"/>
                         <outlet property="inputTextIn" destination="cxG-av-vdC" id="7oj-d7-uQt"/>
                         <outlet property="inputTextOut" destination="XBX-Me-f8L" id="AoW-NB-cgI"/>
+                        <outlet property="labelDate" destination="Yyc-bU-yq8" id="XTY-6S-9I6"/>
+                        <outlet property="labelIncome" destination="7Yr-I3-DVJ" id="3du-rC-IxR"/>
+                        <outlet property="labelResult" destination="pcD-h2-3Xz" id="hJW-JF-b8C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4bm-BL-UZ0" userLabel="First Responder" sceneMemberID="firstResponder"/>

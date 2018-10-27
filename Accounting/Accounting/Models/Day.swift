@@ -45,16 +45,24 @@ class Day {
     }
     
     private func getMinutes(_ time: String) -> Int {
-        var hrs = Int(time.substring(from: 0, to: 2))!
-        let min = Int(time.substring(from: 3, to: 5))!
-        let AM_PM = time.substring(from: 6, to: 8)
-        
-        if AM_PM == "PM" {
-            hrs += 12
+        // 05:20 PM || 5:20 PM
+        let parts = time.components(separatedBy: " ")
+        if let numbers = parts.first {
+            let partsOfNUmbers = numbers.components(separatedBy: ":")
+            if partsOfNUmbers.count == 2 {
+                var hrs = Int(partsOfNUmbers.first!)!
+                let min = Int(partsOfNUmbers.last!)!
+                
+                if parts.last == "PM" {
+                    hrs += 12
+                }
+                
+                let res = hrs * 60 + min
+                return res
+            }
         }
         
-        let res = hrs * 60 + min
-        return res
+        return 0
     }
 }
 
