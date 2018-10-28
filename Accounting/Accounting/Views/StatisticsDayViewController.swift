@@ -20,14 +20,12 @@ class StatisticsDayViewController: UIViewController {
     private var timePicker = UIDatePicker()
     private var durationPicker = DurationPickerView()
     
-    private(set) var calendar = IncomeCalendar()
+    private(set) var calendar = IncomeCalendar.instance
     lazy private var selectedDayIndex = calendar.days.endIndex - 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("size: \(calendar.days.count)")
-        
         // Settings for both types of pickers
         timePicker.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         timePicker.datePickerMode = .time
@@ -48,15 +46,17 @@ class StatisticsDayViewController: UIViewController {
         inputTextOut.inputView = timePicker
         inputTextBreak.inputView = durationPicker
         
-        fillInfo(about: calendar.days[selectedDayIndex])
-        
-        // Swipe
-        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
-        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
-        leftSwipe.direction = .left
-        
-        view.addGestureRecognizer(rightSwipe)
-        view.addGestureRecognizer(leftSwipe)
+        if calendar.days.count > 1 {
+            fillInfo(about: calendar.days[selectedDayIndex])
+            
+            // Swipe
+            let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
+            let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
+            leftSwipe.direction = .left
+            
+            view.addGestureRecognizer(rightSwipe)
+            view.addGestureRecognizer(leftSwipe)
+        }
     }
     
     // Swipe
@@ -121,30 +121,38 @@ class StatisticsDayViewController: UIViewController {
     
    // 3 listeners on textField changes
     @objc func durationChanged() {
-        inputTextBreak.text = durationPicker.selectedItem
         calendar.days[selectedDayIndex].breakDuration = transformDuration(durationPicker.selectedItem)
-        updateResult(with: calendar.days[selectedDayIndex])
-        view.endEditing(true)
+        onChange(at: inputTextBreak, with: durationPicker.selectedItem, day: calendar.days[selectedDayIndex])
     }
     
     @objc func timeChangedIn() {
-        inputTextIn.text = getSelectedTime()
         calendar.days[selectedDayIndex].timeIn = getSelectedTime()
-        updateResult(with: calendar.days[selectedDayIndex])
-        view.endEditing(true)
+        onChange(at: inputTextIn, with: getSelectedTime(), day: calendar.days[selectedDayIndex])
     }
     
     @objc func timeChangedOut() {
-        inputTextOut.text = getSelectedTime()
         calendar.days[selectedDayIndex].timeOut = getSelectedTime()
-        updateResult(with: calendar.days[selectedDayIndex])
+        onChange(at: inputTextOut, with: getSelectedTime(), day: calendar.days[selectedDayIndex])
+    }
+    
+    // Common base listener
+    func onChange(at textField: UITextField, with: String, day: Day) {
+        textField.text = with
+        updateResult(with: day)
         view.endEditing(true)
+        
+        // Save data
+        calendar.save()
     }
     
     // Supporting methods:
     func transformDuration(_ duration: String) -> Int {
-        if let num = duration.components(separatedBy: " ").first {
-            return Int(num)!
+        let parts = duration.components(separatedBy: " ")
+        if parts.count > 1  {
+            if parts.last == "hour" {
+                return 60
+            }
+            return Int(parts.first!)!
         }
         return 0
     }

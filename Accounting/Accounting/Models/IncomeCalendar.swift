@@ -8,9 +8,8 @@
 
 import Foundation
 
-
 class IncomeCalendar {
-    
+    private(set) static var instance = IncomeCalendar()
     private(set) var days = [Day]()
     
     static let salaryPerHour = 12
@@ -18,51 +17,58 @@ class IncomeCalendar {
         return Double(salaryPerHour) / Double(60)
     }
     
-    init() {
-        // TODO - Load data from files
+    fileprivate init() {
+        //clear()
+        days = load()
+    }
+    
+    func testFill() {
         var day = Day(getNextDate())
         day.timeIn = "10:00 AM"
         day.timeOut = "05:20 PM"
         day.breakDuration = 15
         days.append(day)
-        
-        print("- - - Day 0 - - -")
-        print("Date of day: \(day.date)")
-        print("Salary: \(day.salary)")
-        print("Time: \(day.workingTime)")
-        
+       
         day = Day(getNextDate())
         day.timeIn = "09:20 AM"
         day.timeOut = "05:00 PM"
         day.breakDuration = 45
         days.append(day)
-        
-        print("- - - Day 1 - - -")
-        print("Date of day: \(day.date)")
-        print("Salary: \(day.salary)")
-        print("Time: \(day.workingTime)")
-        
+    
         day = Day(getNextDate())
         day.timeIn = "10:20 AM"
         day.timeOut = "06:00 PM"
         day.breakDuration = 0
         days.append(day)
+    }
+    
+    func save() {
+        let userDefaults = UserDefaults.standard
+        let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: days)
+        userDefaults.set(encodedData, forKey: "days")
+        userDefaults.synchronize()
+    }
+    
+    func load() -> [Day] {
+        let userDefaults = UserDefaults.standard
         
-        print("- - - Day 2 - - -")
-        print("Date of day: \(day.date)")
-        print("Salary: \(day.salary)")
-        print("Time: \(day.workingTime)")
-        
-        
+        if userDefaults.object(forKey: "days") != nil {
+            let decoded  = userDefaults.object(forKey: "days") as! Data
+            let decodedDays = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! [Day]
+            return decodedDays
+        }
+        return [Day]()
+    }
+    
+    func clear() {
+        UserDefaults.standard.removeObject(forKey: "days")
     }
     
     func getNextDate() -> Date {
         if let lastDay = days.last {
-            print("getNextDate: +1 day")
             let nextDate = Calendar.current.date(byAdding: .day, value: 1, to: lastDay.date)
             return nextDate!
         } else {
-             print("getNextDate: Date()")
             return Date()
         }
     }

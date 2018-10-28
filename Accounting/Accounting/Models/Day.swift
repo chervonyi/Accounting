@@ -8,14 +8,11 @@
 
 import Foundation
 
-class Day {
+class Day: NSObject, NSCoding {
     
     var timeIn: String? = nil
-    
     var timeOut: String? = nil
-    
     var breakDuration: Int
-    
     private(set) var date: Date
 
     var workingTime: String {
@@ -39,9 +36,33 @@ class Day {
         return Double(workingTimeInMinutes) * IncomeCalendar.salaryPerMin
     }
     
+    // Constructor
     init(_ newDate: Date) {
         date = newDate
         breakDuration = 0
+    }
+    
+    init(_ date: Date, _ timeIn: String, _ timeOut: String, _ breakDuration: Int) {
+        self.date = date
+        self.timeIn = timeIn
+        self.timeOut = timeOut
+        self.breakDuration = breakDuration
+    }
+    
+    // Methods for saving instance of class
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(date, forKey: "date")
+        aCoder.encode(timeIn, forKey: "timeIn")
+        aCoder.encode(timeOut, forKey: "timeOut")
+        aCoder.encode(breakDuration, forKey: "breakDuration")
+    }
+    
+    required convenience init?(coder aDecoder: NSCoder) {
+        let date = aDecoder.decodeObject(forKey: "date") as! Date
+        let timeIn = aDecoder.decodeObject(forKey: "timeIn") as! String
+        let timeOut = aDecoder.decodeObject(forKey: "timeOut") as! String
+        let breakDuration = aDecoder.decodeInteger(forKey: "breakDuration")
+        self.init(date, timeIn, timeOut, breakDuration)
     }
     
     private func getMinutes(_ time: String) -> Int {
