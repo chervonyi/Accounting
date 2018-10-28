@@ -166,7 +166,7 @@ class StatisticsDayViewController: UIViewController {
     }
     
     func updateResult(with day: Day) {
-        labelResult.text = "Result: \(day.workingTime)"
+        labelResult.text = "Result: \(makeWokringTime(with: day.workingTimeInMinutes))"
         
         if day.salary.isPotentialInt {
             labelIncome.text = "$\(Int(day.salary))"
@@ -185,6 +185,17 @@ class StatisticsDayViewController: UIViewController {
     
     @objc func viewTaped(gestureRecognizer: UITapGestureRecognizer) {
         view.endEditing(true)
+    }
+    
+    func makeWokringTime(with time: Int) -> String {
+        var minutes = time
+        let hrs = Int(minutes / 60)
+        minutes = minutes - hrs * 60
+        
+        if minutes != 0 {
+            return "\(hrs) hrs \(minutes) min"
+        }
+        return "\(hrs) hrs"
     }
     
 }

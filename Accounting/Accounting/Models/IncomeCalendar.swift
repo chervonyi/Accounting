@@ -17,9 +17,13 @@ class IncomeCalendar {
         return Double(salaryPerHour) / Double(60)
     }
     
+    private var workingDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+    
     fileprivate init() {
         //clear()
         days = load()
+        //testFill()
+        //save()
     }
     
     func testFill() {
@@ -64,12 +68,22 @@ class IncomeCalendar {
         UserDefaults.standard.removeObject(forKey: "days")
     }
     
+    // Returns a next-working-date from the last day in 'days'.
     func getNextDate() -> Date {
-        if let lastDay = days.last {
-            let nextDate = Calendar.current.date(byAdding: .day, value: 1, to: lastDay.date)
-            return nextDate!
-        } else {
-            return Date()
+        var nextDay = days.last != nil ? Calendar.current.date(byAdding: .day, value: 1, to: days.last!.date)! : Date()
+        
+        while !workingDays.contains(nextDay.dayOfWeek()) {
+            nextDay = Calendar.current.date(byAdding: .day, value: 1, to: nextDay)!
         }
+        
+        return nextDay
+    }
+}
+
+extension Date {
+    func dayOfWeek() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        return dateFormatter.string(from: self).capitalized
     }
 }

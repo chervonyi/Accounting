@@ -15,18 +15,6 @@ class Day: NSObject, NSCoding {
     var breakDuration: Int
     private(set) var date: Date
 
-    var workingTime: String {
-        var minutes = workingTimeInMinutes
-        let hrs = Int(minutes / 60)
-        minutes = minutes - hrs * 60
-        
-        if minutes != 0 {
-            return "\(hrs) hrs \(minutes) min"
-        }
-        return "\(hrs) hrs"
-        
-    }
-    
     var workingTimeInMinutes: Int {
         if timeIn == nil || timeOut == nil {
             return 0
