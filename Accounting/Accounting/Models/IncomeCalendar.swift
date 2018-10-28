@@ -17,13 +17,40 @@ class IncomeCalendar {
         return Double(salaryPerHour) / Double(60)
     }
     
+    // Returns today's index. If is not found then returns index of the last item
+    var todayIndex: Int {
+        for index in days.indices {
+            if Calendar.current.isDate(Date(), inSameDayAs: days[index].date) {
+                return index
+            }
+        }
+        return days.endIndex - 1
+    }
+    
     private var workingDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
     
     fileprivate init() {
         //clear()
         days = load()
+        
+        // Check if last day is today
+        if days.count > 0 {
+            // TODO: Maybe should condition like: lastElement is today && lastElement is Finished
+            // Or set condition like: lastElement is Finished
+            if Calendar.current.isDate(Date(), inSameDayAs: days.last!.date) {
+                appendNewDay(withDate: getNextDate())
+            }
+        } else {
+            appendNewDay(withDate: getNextDate())
+        }
+        
         //testFill()
         //save()
+    }
+    
+    func appendNewDay(withDate date: Date) {
+        days.append(Day(date))
+        save()
     }
     
     func testFill() {

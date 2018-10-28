@@ -14,6 +14,13 @@ class Day: NSObject, NSCoding {
     var timeOut: String? = nil
     var breakDuration: Int
     private(set) var date: Date
+    
+    var isFinished: Bool {
+        if timeIn != nil, timeOut != nil {
+            return true
+        }
+        return false
+    }
 
     var workingTimeInMinutes: Int {
         if timeIn == nil || timeOut == nil {
@@ -35,7 +42,7 @@ class Day: NSObject, NSCoding {
         breakDuration = 0
     }
     
-    init(_ date: Date, _ timeIn: String, _ timeOut: String, _ breakDuration: Int) {
+    init(_ date: Date, _ timeIn: String?, _ timeOut: String?, _ breakDuration: Int) {
         self.date = date
         self.timeIn = timeIn
         self.timeOut = timeOut
@@ -52,8 +59,8 @@ class Day: NSObject, NSCoding {
     
     required convenience init?(coder aDecoder: NSCoder) {
         let date = aDecoder.decodeObject(forKey: "date") as! Date
-        let timeIn = aDecoder.decodeObject(forKey: "timeIn") as! String
-        let timeOut = aDecoder.decodeObject(forKey: "timeOut") as! String
+        let timeIn = aDecoder.decodeObject(forKey: "timeIn") as? String
+        let timeOut = aDecoder.decodeObject(forKey: "timeOut") as? String
         let breakDuration = aDecoder.decodeInteger(forKey: "breakDuration")
         self.init(date, timeIn, timeOut, breakDuration)
     }

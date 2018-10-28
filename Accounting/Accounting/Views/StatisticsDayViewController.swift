@@ -21,11 +21,11 @@ class StatisticsDayViewController: UIViewController {
     private var durationPicker = DurationPickerView()
     
     private(set) var calendar = IncomeCalendar.instance
-    lazy private var selectedDayIndex = calendar.days.endIndex - 1
+    lazy private var selectedDayIndex = calendar.todayIndex
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Settings for both types of pickers
         timePicker.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         timePicker.datePickerMode = .time
@@ -46,7 +46,7 @@ class StatisticsDayViewController: UIViewController {
         inputTextOut.inputView = timePicker
         inputTextBreak.inputView = durationPicker
         
-        if calendar.days.count > 1 {
+        if calendar.days.count > 0 {
             fillInfo(about: calendar.days[selectedDayIndex])
             
             // Swipe
