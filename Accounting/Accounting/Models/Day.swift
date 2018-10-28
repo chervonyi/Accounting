@@ -19,7 +19,12 @@ class Day: NSObject, NSCoding {
         var minutes = workingTimeInMinutes
         let hrs = Int(minutes / 60)
         minutes = minutes - hrs * 60
-        return "\(hrs) hrs \(minutes) min"
+        
+        if minutes != 0 {
+            return "\(hrs) hrs \(minutes) min"
+        }
+        return "\(hrs) hrs"
+        
     }
     
     var workingTimeInMinutes: Int {
