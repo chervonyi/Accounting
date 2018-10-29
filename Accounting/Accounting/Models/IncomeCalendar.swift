@@ -30,10 +30,10 @@ class IncomeCalendar {
     private var workingDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
     
     fileprivate init() {
-        clear()
+        //clear()
         days = load()
         
-        appendNewDay(withDate: Date())
+        //appendNewDay(withDate: Date())
         
         // Check if last day is today
         if days.count > 0 {
@@ -47,12 +47,12 @@ class IncomeCalendar {
         }
         
         //testFill()
-        //save()
+        //save(days: days)
     }
     
     func appendNewDay(withDate date: Date) {
         days.append(Day(date))
-        save()
+        save(days: days)
     }
     
     func testFill() {
@@ -75,7 +75,7 @@ class IncomeCalendar {
         days.append(day)
     }
     
-    func save() {
+    func save(days: [Day]) {
         let userDefaults = UserDefaults.standard
         let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: days)
         userDefaults.set(encodedData, forKey: "days")

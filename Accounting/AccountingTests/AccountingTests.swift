@@ -31,13 +31,6 @@ class AccountingTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    func testGetMinutes() {
-        print("a")
-        let str = "qwerty"
-        var res = str.substring(from: 1, to: 2)
-    }
-    
-    
 }
 
 extension String {

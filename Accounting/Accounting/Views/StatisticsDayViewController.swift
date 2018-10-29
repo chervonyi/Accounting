@@ -121,7 +121,7 @@ class StatisticsDayViewController: UIViewController {
     
    // 3 listeners on textField changes
     @objc func durationChanged() {
-        calendar.days[selectedDayIndex].breakDuration = transformDuration(durationPicker.selectedItem)
+        calendar.days[selectedDayIndex].breakDuration = StatisticsDayViewController.transformDuration(durationPicker.selectedItem)
         onChange(at: inputTextBreak, with: durationPicker.selectedItem, day: calendar.days[selectedDayIndex])
     }
     
@@ -142,11 +142,11 @@ class StatisticsDayViewController: UIViewController {
         view.endEditing(true)
         
         // Save data
-        calendar.save()
+        calendar.save(days: calendar.days)
     }
     
     // Supporting methods:
-    func transformDuration(_ duration: String) -> Int {
+    static func transformDuration(_ duration: String) -> Int {
         let parts = duration.components(separatedBy: " ")
         if parts.count > 1  {
             if parts.last == "hour" {

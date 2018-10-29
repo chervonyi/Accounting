@@ -13,6 +13,8 @@ class BreakDurationViewController: UIViewController {
     @IBOutlet weak var buttonSubmit: UIButton!
     @IBOutlet weak var durationPicker: DurationPickerView!
 
+    var calendar = IncomeCalendar.instance
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,9 +25,15 @@ class BreakDurationViewController: UIViewController {
         durationPicker.dataSource = durationPicker
     }
     
-    @IBAction func onSubmit(_ sender: UIButton) {
-        print(durationPicker.selectedItem)
+    @IBAction func onClickSubmit(_ sender: UIButton) {
+        // Transfrom selected duration (from UIPickerView) from String to Int
+        calendar.days[calendar.todayIndex].breakDuration = StatisticsDayViewController.transformDuration(durationPicker.selectedItem)
+        
+        calendar.save(days: calendar.days)
+        
+        print("Save selected duration: \(durationPicker.selectedItem)")
     }
+    
 }
 
 

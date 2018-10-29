@@ -21,18 +21,25 @@ class StartNewWorkingDayViewController: UIViewController {
     }
     
     @IBAction func onClickSubmit(_ sender: UIButton) {
-        // TODO: Add save curent time into day with current day
         if calendar.days[calendar.todayIndex].timeIn == nil {
             let timeFormatter = DateFormatter()
             timeFormatter.dateStyle = .none
             timeFormatter.timeStyle = .short
             
             let time = timeFormatter.string(for: Date())
-            print("time: \(time!)")
             calendar.days[calendar.todayIndex].timeIn = time
+            
+            save(days: calendar.days)
+            print("Save timeIn with time: \(time!)")
         }
     }
     
+    func save(days: [Day]) {
+        let userDefaults = UserDefaults.standard
+        let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: days)
+        userDefaults.set(encodedData, forKey: "days")
+        userDefaults.synchronize()
+    }
 }
 
 class HighlightedBackgroundButton: UIButton {

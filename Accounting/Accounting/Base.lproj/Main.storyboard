@@ -18,7 +18,7 @@
         <!--Start New Working Day View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="StartNewWorkingDayViewController" customModule="Accounting" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StartNewWorkingDayView" id="BYZ-38-t0r" customClass="StartNewWorkingDayViewController" customModule="Accounting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,6 +31,9 @@
                                 <state key="normal" title="Statistics">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="YmN-vE-VaZ" kind="show" id="LVH-aA-Jvn"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Start a new working day?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Au0-Kg-he1">
                                 <rect key="frame" x="65" y="259" width="245" height="78"/>
@@ -71,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-814" y="34"/>
+            <point key="canvasLocation" x="-820" y="33"/>
         </scene>
         <!--Close View Controller-->
         <scene sceneID="l9S-0h-uKF">
@@ -96,7 +99,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Ok, woking day have been started!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H97-nY-dTV">
-                                <rect key="frame" x="50" y="264.5" width="275" height="78"/>
+                                <rect key="frame" x="50" y="244.5" width="275" height="78"/>
                                 <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -104,11 +107,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="H97-nY-dTV" secondAttribute="trailing" constant="50" id="8c1-di-XL9"/>
+                            <constraint firstItem="H97-nY-dTV" firstAttribute="centerY" secondItem="Trf-Zm-DqV" secondAttribute="centerY" constant="-50" id="8gm-8f-qud"/>
+                            <constraint firstAttribute="trailing" secondItem="H97-nY-dTV" secondAttribute="trailing" constant="50" id="9vZ-pZ-Qmp"/>
                             <constraint firstItem="t7W-cZ-HfB" firstAttribute="bottom" secondItem="CTf-9r-782" secondAttribute="bottom" constant="32" id="A32-jZ-9sM"/>
                             <constraint firstItem="CTf-9r-782" firstAttribute="centerX" secondItem="Trf-Zm-DqV" secondAttribute="centerX" id="BPT-32-iZI"/>
-                            <constraint firstItem="H97-nY-dTV" firstAttribute="leading" secondItem="Trf-Zm-DqV" secondAttribute="leading" constant="50" id="jIj-Cn-qyU"/>
-                            <constraint firstItem="H97-nY-dTV" firstAttribute="centerY" secondItem="Trf-Zm-DqV" secondAttribute="centerY" constant="-30" id="pkx-Ak-zaC"/>
+                            <constraint firstItem="H97-nY-dTV" firstAttribute="leading" secondItem="t7W-cZ-HfB" secondAttribute="leading" constant="50" id="dYm-wu-A47"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t7W-cZ-HfB"/>
                     </view>
@@ -118,12 +121,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aaq-uN-N7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-31" y="33"/>
+            <point key="canvasLocation" x="-20" y="33"/>
         </scene>
         <!--End Working Day View Controller-->
         <scene sceneID="7Sg-kV-Rrp">
             <objects>
-                <viewController id="Hru-Ca-xKo" customClass="EndWorkingDayViewController" customModule="Accounting" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EndWorkingDayView" id="Hru-Ca-xKo" customClass="EndWorkingDayViewController" customModule="Accounting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FNx-d2-9UF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,6 +146,9 @@
                                 <state key="normal" title="Later">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="YmN-vE-VaZ" kind="show" id="ZgH-j6-6Y4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIY-GD-76y" customClass="HighlightedBackgroundButton" customModule="Accounting" customModuleProvider="target">
                                 <rect key="frame" x="137.5" y="571" width="100" height="34"/>
@@ -153,6 +159,10 @@
                                 </constraints>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="YES"/>
+                                <connections>
+                                    <action selector="onClickSubmit:" destination="Hru-Ca-xKo" eventType="touchUpInside" id="yU5-bD-JyW"/>
+                                    <segue destination="Y9k-kB-w6h" kind="show" id="Hhm-33-1My"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="You have been working for 6 hrs 32 min" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Te4-lf-SRQ">
                                 <rect key="frame" x="91" y="362" width="192" height="110"/>
@@ -204,6 +214,9 @@
                                 <state key="normal" title="Later">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="EIn-us-QYb" kind="show" id="naJ-DT-KZM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTA-e5-nQJ" customClass="HighlightedBackgroundButton" customModule="Accounting" customModuleProvider="target">
                                 <rect key="frame" x="137.5" y="571" width="100" height="34"/>
@@ -215,7 +228,8 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="YES"/>
                                 <connections>
-                                    <action selector="onSubmit:" destination="Y9k-kB-w6h" eventType="touchUpInside" id="u9h-hy-Fwb"/>
+                                    <action selector="onClickSubmit:" destination="Y9k-kB-w6h" eventType="touchUpInside" id="AzD-KW-qNn"/>
+                                    <segue destination="EIn-us-QYb" kind="show" id="UFp-xX-soN"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npW-Su-VdY" customClass="DurationPickerView" customModule="Accounting" customModuleProvider="target">
@@ -278,6 +292,9 @@
                                 </constraints>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="OK"/>
+                                <connections>
+                                    <segue destination="YmN-vE-VaZ" kind="show" id="xgr-8w-ZSL"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Result for today:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j87-bZ-4tl">
                                 <rect key="frame" x="111" y="235.5" width="153" height="29"/>
@@ -299,6 +316,7 @@
                     </view>
                     <connections>
                         <outlet property="buttonSubmit" destination="TPX-Wo-Its" id="Jew-yN-gbc"/>
+                        <outlet property="labelResult" destination="ONq-3Q-pfN" id="HFK-Xc-dmR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dnd-Ob-p6L" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -308,7 +326,7 @@
         <!--Statistics Day View Controller-->
         <scene sceneID="SUb-yk-Zq1">
             <objects>
-                <viewController id="YmN-vE-VaZ" customClass="StatisticsDayViewController" customModule="Accounting" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StatisticsDayView" id="YmN-vE-VaZ" customClass="StatisticsDayViewController" customModule="Accounting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K1K-wa-1qO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -430,4 +448,8 @@
             <point key="canvasLocation" x="2997.5999999999999" y="33.733133433283363"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xgr-8w-ZSL"/>
+        <segue reference="UFp-xX-soN"/>
+    </inferredMetricsTieBreakers>
 </document>

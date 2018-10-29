@@ -15,21 +15,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        let calendar = IncomeCalendar.instance
+        let day = calendar.days[calendar.todayIndex]
         
-        /*
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window = UIWindow(frame: UIScreen.main.bounds)
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         var initialViewController: UIViewController
-        if()  {
-            initialViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MainController") as! MainViewController
+        if day.timeIn == nil  {
+            initialViewController = mainStoryboard.instantiateViewController(withIdentifier: "StartNewWorkingDayView") as! StartNewWorkingDayViewController
+        } else if day.timeIn != nil, day.timeOut == nil {
+            initialViewController = mainStoryboard.instantiateViewController(withIdentifier: "EndWorkingDayView") as! EndWorkingDayViewController
         } else {
-            initialViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LoginController") as! LoginViewController
+            initialViewController = mainStoryboard.instantiateViewController(withIdentifier: "StatisticsDayView") as! StatisticsDayViewController
         }
         
         self.window?.rootViewController = initialViewController
         
         self.window?.makeKeyAndVisible()
-        */
+        
         return true
     }
 
