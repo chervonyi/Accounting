@@ -11,6 +11,7 @@ import UIKit
 class EndWorkingDayViewController: UIViewController {
 
     @IBOutlet weak var buttonSubmit: HighlightedBackgroundButton!
+    @IBOutlet weak var labelTime: UILabel!
     
     var calendar = IncomeCalendar.instance
     
@@ -18,21 +19,25 @@ class EndWorkingDayViewController: UIViewController {
         super.viewDidLoad()
         
         buttonSubmit.layer.cornerRadius = buttonSubmit.frame.height / 2
-        // TODO: Add dyniamic panel "You have been working for ____"
+        
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateStyle = .none
+        timeFormatter.timeStyle = .short
+        
+        let timeEnd = timeFormatter.string(for: Date())
+        calendar.days[calendar.todayIndex].timeOut = timeEnd
+        
+        let time = calendar.days[calendar.todayIndex].workingTimeInMinutes
+        let strTime = StatisticsDayViewController.makeWokringTime(with: time)
+        labelTime.text = "You have been working for \(strTime)"
+        
+        calendar.save(days: calendar.days)
     }
 
-    @IBAction func onClickSubmit(_ sender: UIButton) {
-        if calendar.days[calendar.todayIndex].timeOut == nil {
-            let timeFormatter = DateFormatter()
-            timeFormatter.dateStyle = .none
-            timeFormatter.timeStyle = .short
-            
-            let time = timeFormatter.string(for: Date())
-            calendar.days[calendar.todayIndex].timeOut = time
-            
-            calendar.save(days: calendar.days)
-            print("Save timeOut with time: \(time!)")
-        }
+    @IBAction func onClickLater(_ sender: UIButton) {
+        // Remove saved timeOut before in 'viewDidLoad' method
+        calendar.days[calendar.todayIndex].timeOut = nil
+        calendar.save(days: calendar.days)
     }
     
 }

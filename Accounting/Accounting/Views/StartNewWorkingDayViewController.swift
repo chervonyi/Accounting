@@ -26,11 +26,9 @@ class StartNewWorkingDayViewController: UIViewController {
             timeFormatter.dateStyle = .none
             timeFormatter.timeStyle = .short
             
-            let time = timeFormatter.string(for: Date())
-            calendar.days[calendar.todayIndex].timeIn = time
+            calendar.days[calendar.todayIndex].timeIn = timeFormatter.string(for: Date())
             
             save(days: calendar.days)
-            print("Save timeIn with time: \(time!)")
         }
     }
     

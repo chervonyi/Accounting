@@ -18,8 +18,6 @@ class CloseViewController: UIViewController {
         buttonClose.layer.cornerRadius = buttonClose.frame.height / 2
     }
     @IBAction func onClickClose(_ sender: UIButton) {
-        print("Close app")
         exit(0)
     }
-    
 }

@@ -25,7 +25,6 @@ class ResultViewController: UIViewController {
         } else {
             labelResult.text = "$\(salaryForToday)"
         }
-        print("Calculated salary from calendar")
         
         buttonSubmit.layer.cornerRadius = buttonSubmit.frame.height / 2
     }

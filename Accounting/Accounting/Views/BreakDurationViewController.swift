@@ -30,8 +30,6 @@ class BreakDurationViewController: UIViewController {
         calendar.days[calendar.todayIndex].breakDuration = StatisticsDayViewController.transformDuration(durationPicker.selectedItem)
         
         calendar.save(days: calendar.days)
-        
-        print("Save selected duration: \(durationPicker.selectedItem)")
     }
     
 }

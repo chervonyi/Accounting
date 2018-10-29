@@ -33,8 +33,6 @@ class IncomeCalendar {
         //clear()
         days = load()
         
-        //appendNewDay(withDate: Date())
-        
         // Check if last day is today
         if days.count > 0 {
             // TODO: Maybe should condition like: lastElement is today && lastElement is Finished
@@ -45,9 +43,6 @@ class IncomeCalendar {
         } else {
             appendNewDay(withDate: getNextDate())
         }
-        
-        //testFill()
-        //save(days: days)
     }
     
     func appendNewDay(withDate date: Date) {
