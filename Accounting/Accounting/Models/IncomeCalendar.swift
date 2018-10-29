@@ -30,8 +30,10 @@ class IncomeCalendar {
     private var workingDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
     
     fileprivate init() {
-        //clear()
+        clear()
         days = load()
+        
+        appendNewDay(withDate: Date())
         
         // Check if last day is today
         if days.count > 0 {

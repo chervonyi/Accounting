@@ -12,10 +12,25 @@ class StartNewWorkingDayViewController: UIViewController {
 
     @IBOutlet weak var buttonSubmit: HighlightedBackgroundButton!
     
+    var calendar = IncomeCalendar.instance
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         buttonSubmit.layer.cornerRadius = buttonSubmit.frame.height / 2
+    }
+    
+    @IBAction func onClickSubmit(_ sender: UIButton) {
+        // TODO: Add save curent time into day with current day
+        if calendar.days[calendar.todayIndex].timeIn == nil {
+            let timeFormatter = DateFormatter()
+            timeFormatter.dateStyle = .none
+            timeFormatter.timeStyle = .short
+            
+            let time = timeFormatter.string(for: Date())
+            print("time: \(time!)")
+            calendar.days[calendar.todayIndex].timeIn = time
+        }
     }
     
 }

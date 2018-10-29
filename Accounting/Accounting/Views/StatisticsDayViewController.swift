@@ -166,12 +166,17 @@ class StatisticsDayViewController: UIViewController {
     }
     
     func updateResult(with day: Day) {
-        labelResult.text = "Result: \(makeWokringTime(with: day.workingTimeInMinutes))"
-        
-        if day.salary.isPotentialInt {
-            labelIncome.text = "$\(Int(day.salary))"
+        if day.isFinished {
+            labelResult.text = "Result: \(makeWokringTime(with: day.workingTimeInMinutes))"
+            
+            if day.salary.isPotentialInt {
+                labelIncome.text = "$\(Int(day.salary))"
+            } else {
+                labelIncome.text = "$\(day.salary)"
+            }
         } else {
-            labelIncome.text = "$\(day.salary)"
+            labelResult.text = "Result: ?"
+            labelIncome.text = "$?"
         }
     }
     
