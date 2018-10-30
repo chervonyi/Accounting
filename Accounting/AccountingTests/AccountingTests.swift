@@ -32,11 +32,3 @@ class AccountingTests: XCTestCase {
         }
     }
 }
-
-extension String {
-    func substring(from: Int, to: Int) -> String{
-        let myNSString = self as NSString
-        return myNSString.substring(with: NSRange(location: from, length: to))
-        
-    }
-}

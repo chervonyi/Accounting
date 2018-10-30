@@ -10,7 +10,6 @@
 		DA3B38FB21823F180056486B /* DurationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B38FA21823F180056486B /* DurationPickerView.swift */; };
 		DA3B3900218278510056486B /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B38FF218278510056486B /* Day.swift */; };
 		DA3B3904218286F60056486B /* IncomeCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B3903218286F60056486B /* IncomeCalendar.swift */; };
-		DA3B390F218295810056486B /* AccountingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B390E218295810056486B /* AccountingTests.swift */; };
 		DA3B3916218295CF0056486B /* DayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B39062182949C0056486B /* DayTests.swift */; };
 		DAC373F22186877D0091DD9B /* CloseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC373F12186877D0091DD9B /* CloseViewController.swift */; };
 		DAE9B0C2217E6BD300CE67C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE9B0C1217E6BD300CE67C5 /* AppDelegate.swift */; };
@@ -40,7 +39,6 @@
 		DA3B3903218286F60056486B /* IncomeCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeCalendar.swift; sourceTree = "<group>"; };
 		DA3B39062182949C0056486B /* DayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTests.swift; sourceTree = "<group>"; };
 		DA3B390C218295810056486B /* AccountingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccountingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA3B390E218295810056486B /* AccountingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingTests.swift; sourceTree = "<group>"; };
 		DA3B3910218295810056486B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAC373F12186877D0091DD9B /* CloseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CloseViewController.swift; path = Accounting/Views/CloseViewController.swift; sourceTree = SOURCE_ROOT; };
 		DAE9B0BE217E6BD300CE67C5 /* Accounting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Accounting.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,7 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				DA3B39062182949C0056486B /* DayTests.swift */,
-				DA3B390E218295810056486B /* AccountingTests.swift */,
 				DA3B3910218295810056486B /* Info.plist */,
 			);
 			path = AccountingTests;
@@ -251,7 +248,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA3B3916218295CF0056486B /* DayTests.swift in Sources */,
-				DA3B390F218295810056486B /* AccountingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

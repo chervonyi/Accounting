@@ -85,11 +85,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTf-9r-782" customClass="HighlightedBackgroundButton" customModule="Accounting" customModuleProvider="target">
-                                <rect key="frame" x="122.5" y="601" width="130" height="34"/>
+                                <rect key="frame" x="127" y="569" width="120" height="34"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="14b-7U-W8O"/>
-                                    <constraint firstAttribute="height" constant="34" id="ZOF-3d-iU0"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="YeQ-ih-3os"/>
                                 </constraints>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="CLOSE APP"/>
@@ -104,14 +103,42 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M69-zM-w3N" customClass="HighlightedFontButton" customModule="Accounting" customModuleProvider="target">
+                                <rect key="frame" x="150" y="613" width="75" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="4vt-89-KGx"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="KZY-M0-lCQ"/>
+                                </constraints>
+                                <state key="normal" title="Statistics">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="YmN-vE-VaZ" kind="show" id="Y1Q-9K-Ydm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Now you can close application or view statistics" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N94-PU-DOe">
+                                <rect key="frame" x="80" y="363" width="215" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="A6B-tw-hmc"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="110" id="fkR-z7-KzV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="18"/>
+                                <color key="textColor" red="0.38511981870000001" green="0.38511981870000001" blue="0.38511981870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="N94-PU-DOe" firstAttribute="top" secondItem="H97-nY-dTV" secondAttribute="bottom" constant="40.5" id="1Bq-6C-cw5"/>
                             <constraint firstItem="H97-nY-dTV" firstAttribute="centerY" secondItem="Trf-Zm-DqV" secondAttribute="centerY" constant="-50" id="8gm-8f-qud"/>
                             <constraint firstAttribute="trailing" secondItem="H97-nY-dTV" secondAttribute="trailing" constant="50" id="9vZ-pZ-Qmp"/>
-                            <constraint firstItem="t7W-cZ-HfB" firstAttribute="bottom" secondItem="CTf-9r-782" secondAttribute="bottom" constant="32" id="A32-jZ-9sM"/>
-                            <constraint firstItem="CTf-9r-782" firstAttribute="centerX" secondItem="Trf-Zm-DqV" secondAttribute="centerX" id="BPT-32-iZI"/>
+                            <constraint firstItem="t7W-cZ-HfB" firstAttribute="trailing" secondItem="N94-PU-DOe" secondAttribute="trailing" constant="80" id="FxR-O7-vrK"/>
+                            <constraint firstItem="N94-PU-DOe" firstAttribute="leading" secondItem="t7W-cZ-HfB" secondAttribute="leading" constant="80" id="HmN-Xo-smV"/>
+                            <constraint firstItem="t7W-cZ-HfB" firstAttribute="bottom" secondItem="M69-zM-w3N" secondAttribute="bottom" constant="20" id="K5t-eb-53J"/>
+                            <constraint firstItem="M69-zM-w3N" firstAttribute="centerX" secondItem="Trf-Zm-DqV" secondAttribute="centerX" id="Tt6-5M-kx9"/>
                             <constraint firstItem="H97-nY-dTV" firstAttribute="leading" secondItem="t7W-cZ-HfB" secondAttribute="leading" constant="50" id="dYm-wu-A47"/>
+                            <constraint firstItem="M69-zM-w3N" firstAttribute="top" secondItem="CTf-9r-782" secondAttribute="bottom" constant="10" id="dlg-fB-6hm"/>
+                            <constraint firstItem="CTf-9r-782" firstAttribute="centerX" secondItem="Trf-Zm-DqV" secondAttribute="centerX" id="jcr-n7-RkZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t7W-cZ-HfB"/>
                     </view>
@@ -138,12 +165,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RD3-AH-cLM" customClass="HighlightedFontButton" customModule="Accounting" customModuleProvider="target">
-                                <rect key="frame" x="166.5" y="613" width="42" height="34"/>
+                                <rect key="frame" x="150.5" y="613" width="75" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="0XI-UO-cSU"/>
                                     <constraint firstAttribute="height" constant="34" id="kOU-Gt-1LD"/>
                                 </constraints>
-                                <state key="normal" title="Later">
+                                <state key="normal" title="Statistics">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -450,7 +477,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZgH-j6-6Y4"/>
-        <segue reference="UFp-xX-soN"/>
+        <segue reference="xgr-8w-ZSL"/>
+        <segue reference="naJ-DT-KZM"/>
     </inferredMetricsTieBreakers>
 </document>
