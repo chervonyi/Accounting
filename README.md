@@ -33,3 +33,8 @@ _**Task:**_ Create a simple application to calculate your income. The result per
 
 #### v.1.0.0 [Alpha] - 10/29/2018
 * Added dynamic workingTime to label in EndWorkingDay scene
+
+#### v.1.0.7 - 10/30/2018
+* Fixed bug with transformation from time to minutes
+* Added 'Statistics' button to CloseApp scene
+* Redesigned CloseApp scene
