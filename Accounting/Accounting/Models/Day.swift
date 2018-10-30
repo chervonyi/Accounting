@@ -66,7 +66,6 @@ class Day: NSObject, NSCoding {
     }
     
     private func getMinutes(_ time: String) -> Int {
-        // 05:20 PM || 5:20 PM
         let parts = time.components(separatedBy: " ")
         if let numbers = parts.first {
             let partsOfNUmbers = numbers.components(separatedBy: ":")
@@ -74,8 +73,10 @@ class Day: NSObject, NSCoding {
                 var hrs = Int(partsOfNUmbers.first!)!
                 let min = Int(partsOfNUmbers.last!)!
                 
-                if parts.last == "PM" {
+                if parts.last == "PM", hrs != 12 {
                     hrs += 12
+                } else if parts.last == "AM", hrs == 12 {
+                    hrs = 0
                 }
                 
                 let res = hrs * 60 + min
