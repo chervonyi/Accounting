@@ -59,6 +59,17 @@ class StatisticsDayViewController: UIViewController {
         }
     }
     
+    // Rotaion
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        if UIDevice.current.orientation.isLandscape {
+            print("Landscape")
+            //let newViewController = NewViewController()
+            //self.navigationController?.pushViewController(newViewController, animated: true)
+        } else {
+            print("Portrait")
+        }
+    }
+    
     // Swipe
     @objc func handleSwipe(sender: UISwipeGestureRecognizer) {
         if sender.state == .ended {
