@@ -32,14 +32,21 @@ class IncomeCalendar {
         return days.endIndex - 1
     }
     
-    var workingWeeks: [Day] {
-        // TODO - Continue from here
-        return [Day]()
+    var startWeeksIndices: [Int] {
+        var starts = [Int]()
+        
+        for index in days.indices {
+            if days[index].isWeekStart {
+                starts.append(index)
+            }
+        }
+ 
+        return starts
     }
     
     // Constructor:
     fileprivate init() {
-        clear()
+        //clear()
         days = load()
         
         // Check if last day is today
@@ -77,6 +84,10 @@ class IncomeCalendar {
         
         save(days: days)
     }
+    
+    func getWorkingWeeks(withStartWeeks startIndex: Int) -> [Day] {
+        return Array(days[startIndex..<startIndex + 10])
+    }
 
     // Data-methods:
     func save(days: [Day]) {
@@ -111,6 +122,15 @@ class IncomeCalendar {
         
         return newDate
     }
+    
+    static func calculateTotalIncome(for days: [Day]) -> Double {
+        return days.reduce(0.0, {$0 + $1.salary})
+    }
+    
+    static func calculateTotalTime(for days: [Day]) -> Int {
+        return days.reduce(0, {$0 + $1.workingTimeInMinutes})
+    }
+    
 }
 
 extension Date {

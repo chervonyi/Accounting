@@ -21,7 +21,7 @@ class StatisticsDayViewController: UIViewController {
     private var durationPicker = DurationPickerView()
     
     private(set) var calendar = IncomeCalendar.instance
-    lazy private var selectedDayIndex = calendar.todayIndex
+    lazy var selectedDayIndex = calendar.todayIndex
     
     override func viewDidLoad() {
         super.viewDidLoad()

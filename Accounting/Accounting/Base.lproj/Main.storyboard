@@ -509,6 +509,9 @@
                                                         <color key="value" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onClickDayButton:" destination="17A-fE-nM2" eventType="touchUpInside" id="irF-pb-GrQ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJg-qh-8jL">
                                                 <rect key="frame" x="104" y="0.0" width="84" height="85"/>
@@ -528,6 +531,9 @@
                                                         <color key="value" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onClickDayButton:" destination="17A-fE-nM2" eventType="touchUpInside" id="XeO-Kz-aYU"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWQ-VH-PEb">
                                                 <rect key="frame" x="208" y="0.0" width="84" height="85"/>
@@ -547,6 +553,9 @@
                                                         <color key="value" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onClickDayButton:" destination="17A-fE-nM2" eventType="touchUpInside" id="kwr-hQ-e21"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6F-Jc-Pf6">
                                                 <rect key="frame" x="312" y="0.0" width="84" height="85"/>
@@ -566,6 +575,9 @@
                                                         <color key="value" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onClickDayButton:" destination="17A-fE-nM2" eventType="touchUpInside" id="rBb-P9-wai"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8M-pr-Ebt">
                                                 <rect key="frame" x="416" y="0.0" width="84" height="85"/>
@@ -585,6 +597,9 @@
                                                         <color key="value" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onClickDayButton:" destination="17A-fE-nM2" eventType="touchUpInside" id="FkF-c4-swV"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -609,6 +624,9 @@
                                                         <color key="value" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onClickDayButton:" destination="17A-fE-nM2" eventType="touchUpInside" id="PGu-RY-jvs"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yf7-yq-Zpc">
                                                 <rect key="frame" x="104" y="0.0" width="84" height="85"/>
@@ -628,6 +646,9 @@
                                                         <color key="value" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onClickDayButton:" destination="17A-fE-nM2" eventType="touchUpInside" id="55X-bH-iWL"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqv-cO-mGh">
                                                 <rect key="frame" x="208" y="0.0" width="84" height="85"/>
@@ -647,6 +668,9 @@
                                                         <color key="value" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onClickDayButton:" destination="17A-fE-nM2" eventType="touchUpInside" id="hUj-tx-4T4"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTT-rB-BZt">
                                                 <rect key="frame" x="312" y="0.0" width="84" height="85"/>
@@ -666,6 +690,9 @@
                                                         <color key="value" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onClickDayButton:" destination="17A-fE-nM2" eventType="touchUpInside" id="0bz-eX-Bev"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bZ-Af-QAd">
                                                 <rect key="frame" x="416" y="0.0" width="84" height="85"/>
@@ -685,6 +712,9 @@
                                                         <color key="value" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onClickDayButton:" destination="17A-fE-nM2" eventType="touchUpInside" id="qU7-B2-RBh"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -727,6 +757,8 @@
                         <viewLayoutGuide key="safeArea" id="wgw-FP-tTc"/>
                     </view>
                     <connections>
+                        <outlet property="labelIncome" destination="BOR-Gr-9uR" id="1fS-7e-QZj"/>
+                        <outlet property="labelTime" destination="TAa-Ox-1mo" id="hgU-00-2z7"/>
                         <outletCollection property="daysButtons" destination="XeG-6z-olG" collectionClass="NSMutableArray" id="YDK-jS-Qtt"/>
                         <outletCollection property="daysButtons" destination="BJg-qh-8jL" collectionClass="NSMutableArray" id="r0t-0z-dDt"/>
                         <outletCollection property="daysButtons" destination="oWQ-VH-PEb" collectionClass="NSMutableArray" id="Dkc-v2-ujA"/>
@@ -737,15 +769,16 @@
                         <outletCollection property="daysButtons" destination="eqv-cO-mGh" collectionClass="NSMutableArray" id="XMO-Bw-Aal"/>
                         <outletCollection property="daysButtons" destination="MTT-rB-BZt" collectionClass="NSMutableArray" id="Lg6-5i-58X"/>
                         <outletCollection property="daysButtons" destination="1bZ-Af-QAd" collectionClass="NSMutableArray" id="AFz-Pw-oxI"/>
+                        <segue destination="YmN-vE-VaZ" kind="show" identifier="MoveToDay" id="Xdw-dQ-Q2i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ud5-A1-cRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3485.307346326837" y="-31.199999999999999"/>
+            <point key="canvasLocation" x="3455" y="-30"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xgr-8w-ZSL"/>
+        <segue reference="Xdw-dQ-Q2i"/>
         <segue reference="naJ-DT-KZM"/>
     </inferredMetricsTieBreakers>
 </document>
