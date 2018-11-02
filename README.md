@@ -43,3 +43,6 @@ _**Task:**_ Create a simple application to calculate your income. The result per
 * Created and connected StatisticsWeeks scene
 * Added dynamic visualization of all dayButtons and two labels
 * Added action to all dayButtons
+
+#### v.1.1.2 - 11/02/2018
+* The action of a swipe down have been moved to a separate button
