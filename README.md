@@ -38,3 +38,8 @@ _**Task:**_ Create a simple application to calculate your income. The result per
 * Fixed bug with transformation from time to minutes
 * Added 'Statistics' button to CloseApp scene
 * Redesigned CloseApp scene
+
+#### v.1.1.0 - 11/02/2018
+* Created and connected StatisticsWeeks scene
+* Added dynamic visualization of all dayButtons and two labels
+* Added action to all dayButtons
