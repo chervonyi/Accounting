@@ -29,10 +29,13 @@ class StatisticsWeeksViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let value = UIInterfaceOrientation.landscapeRight.rawValue
+        UIDevice.current.setValue(value, forKey: "orientation")
 
         for index in daysButtons.indices {
             let day = days[index]
-            daysButtons[index].setTitle("$\(day.salary)", for: UIControlState.normal)
+            daysButtons[index].setTitle("$\(Int(day.salary))", for: UIControlState.normal)
             
             if Calendar.current.isDate(Date(), inSameDayAs: day.date) {
                 daysButtons[index].borderColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
@@ -41,14 +44,14 @@ class StatisticsWeeksViewController: UIViewController {
         
         let totalMinutes = IncomeCalendar.calculateTotalTime(for: days)
         let totalSalary = IncomeCalendar.calculateTotalIncome(for: days)
-        
+    
         labelTime.text = "Time: \(StatisticsDayViewController.makeWokringTime(with: totalMinutes))"
         labelIncome.text = "Income: $\(totalSalary)"
     }
     
     @IBAction func onClickDayButton(_ sender: UIButton) {
-        let value = UIInterfaceOrientation.portrait.rawValue
-        UIDevice.current.setValue(value, forKey: "orientation")
+        //let value = UIInterfaceOrientation.portrait.rawValue
+        //UIDevice.current.setValue(value, forKey: "orientation")
         
         performSegue(withIdentifier: "MoveToDay", sender: sender)
     }

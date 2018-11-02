@@ -26,6 +26,10 @@ class StatisticsDayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let value = UIInterfaceOrientation.portrait.rawValue
+        UIDevice.current.setValue(value, forKey: "orientation")
+        
+        
         // Settings for both types of pickers
         timePicker.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         timePicker.datePickerMode = .time
@@ -53,17 +57,19 @@ class StatisticsDayViewController: UIViewController {
             let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
             let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
             leftSwipe.direction = .left
-            let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
-            downSwipe.direction = .down
             
             view.addGestureRecognizer(rightSwipe)
             view.addGestureRecognizer(leftSwipe)
-            view.addGestureRecognizer(downSwipe)
         }
     }
     
     override open var shouldAutorotate: Bool {
         return false
+    }
+    
+    @IBAction func onClickFullStatistics(_ sender: UIButton) {
+//        let value = UIInterfaceOrientation.landscapeRight.rawValue
+//        UIDevice.current.setValue(value, forKey: "orientation")
     }
     
     // Swipe
@@ -81,15 +87,6 @@ class StatisticsDayViewController: UIViewController {
                     selectedDayIndex += 1
                     fillInfo(about: calendar.days[selectedDayIndex])
                 }
-                
-            case .down:
-                let value = UIInterfaceOrientation.landscapeRight.rawValue
-                UIDevice.current.setValue(value, forKey: "orientation")
-                
-                // TODO: Remove moving to another View via Button
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "StatisticsWeeksViewController") as! StatisticsWeeksViewController
-                self.present(newViewController, animated: true, completion: nil)
                 
             default:
                 break
