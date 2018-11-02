@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="17A-fE-nM2">
-    <device id="retina4_7" orientation="landscape">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,11 +20,11 @@
             <objects>
                 <viewController storyboardIdentifier="StartNewWorkingDayView" id="BYZ-38-t0r" customClass="StartNewWorkingDayViewController" customModule="Accounting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8LU-fw-cQn" customClass="HighlightedFontButton" customModule="Accounting" customModuleProvider="target">
-                                <rect key="frame" x="296" y="321" width="75" height="34"/>
+                                <rect key="frame" x="150" y="613" width="75" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="hNW-3b-h5I"/>
                                 </constraints>
@@ -36,13 +36,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Start a new working day?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Au0-Kg-he1">
-                                <rect key="frame" x="65" y="122.5" width="537" height="39"/>
+                                <rect key="frame" x="65" y="259" width="245" height="78"/>
                                 <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Zg-gB-sIj" customClass="HighlightedBackgroundButton" customModule="Accounting" customModuleProvider="target">
-                                <rect key="frame" x="283.5" y="267" width="100" height="34"/>
+                                <rect key="frame" x="137.5" y="559" width="100" height="34"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="RR6-qC-aFt"/>
@@ -81,11 +81,11 @@
             <objects>
                 <viewController id="wkR-UD-UkE" customClass="CloseViewController" customModule="Accounting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Trf-Zm-DqV">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTf-9r-782" customClass="HighlightedBackgroundButton" customModule="Accounting" customModuleProvider="target">
-                                <rect key="frame" x="273.5" y="267" width="120" height="34"/>
+                                <rect key="frame" x="127.5" y="559" width="120" height="34"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="X5p-3G-OQB"/>
@@ -99,13 +99,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Ok, woking day have been started!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H97-nY-dTV">
-                                <rect key="frame" x="50" y="118" width="567" height="39"/>
+                                <rect key="frame" x="50" y="244.5" width="275" height="78"/>
                                 <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M69-zM-w3N" customClass="HighlightedFontButton" customModule="Accounting" customModuleProvider="target">
-                                <rect key="frame" x="296" y="321" width="75" height="34"/>
+                                <rect key="frame" x="150" y="613" width="75" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="4vt-89-KGx"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="KZY-M0-lCQ"/>
@@ -118,7 +118,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Now you can close application or view statistics" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N94-PU-DOe">
-                                <rect key="frame" x="80" y="197.5" width="507" height="110"/>
+                                <rect key="frame" x="80" y="363" width="215" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="A6B-tw-hmc"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="110" id="fkR-z7-KzV"/>
@@ -156,17 +156,17 @@
             <objects>
                 <viewController storyboardIdentifier="EndWorkingDayView" id="Hru-Ca-xKo" customClass="EndWorkingDayViewController" customModule="Accounting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FNx-d2-9UF">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Do you want to finish this working day?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3p7-I5-OLE">
-                                <rect key="frame" x="65" y="68" width="537" height="39"/>
+                                <rect key="frame" x="65" y="185" width="245" height="117"/>
                                 <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RD3-AH-cLM" customClass="HighlightedFontButton" customModule="Accounting" customModuleProvider="target">
-                                <rect key="frame" x="296" y="321" width="75" height="34"/>
+                                <rect key="frame" x="150" y="613" width="75" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="0XI-UO-cSU"/>
                                     <constraint firstAttribute="height" constant="34" id="kOU-Gt-1LD"/>
@@ -180,7 +180,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIY-GD-76y" customClass="HighlightedBackgroundButton" customModule="Accounting" customModuleProvider="target">
-                                <rect key="frame" x="283.5" y="267" width="100" height="34"/>
+                                <rect key="frame" x="137.5" y="559" width="100" height="34"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="Chi-L0-DUp"/>
@@ -193,7 +193,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="You have been working for 6 hrs 32 min" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Te4-lf-SRQ">
-                                <rect key="frame" x="91" y="167" width="484" height="110"/>
+                                <rect key="frame" x="91" y="362" width="192" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="cj5-mp-lk1"/>
                                 </constraints>
@@ -231,11 +231,11 @@
             <objects>
                 <viewController id="Y9k-kB-w6h" customClass="BreakDurationViewController" customModule="Accounting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xAS-e3-aVd">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q07-b3-TgK" customClass="HighlightedFontButton" customModule="Accounting" customModuleProvider="target">
-                                <rect key="frame" x="312.5" y="321" width="42" height="34"/>
+                                <rect key="frame" x="166.5" y="613" width="42" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="NzS-r7-Dma"/>
                                     <constraint firstAttribute="height" constant="34" id="hck-N8-cJk"/>
@@ -248,7 +248,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTA-e5-nQJ" customClass="HighlightedBackgroundButton" customModule="Accounting" customModuleProvider="target">
-                                <rect key="frame" x="283.5" y="267" width="100" height="34"/>
+                                <rect key="frame" x="137.5" y="559" width="100" height="34"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="6jS-G2-dmY"/>
@@ -262,12 +262,12 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npW-Su-VdY" customClass="DurationPickerView" customModule="Accounting" customModuleProvider="target">
-                                <rect key="frame" x="173.5" y="106.5" width="320" height="162"/>
+                                <rect key="frame" x="27.5" y="225.5" width="320" height="216"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.87492262556690659" green="0.73251206617840126" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Break duration" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fv1-wC-nKy">
-                                <rect key="frame" x="254.5" y="65.5" width="158" height="32.5"/>
+                                <rect key="frame" x="108.5" y="184.5" width="158" height="32.5"/>
                                 <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -301,11 +301,11 @@
             <objects>
                 <viewController id="EIn-us-QYb" customClass="ResultViewController" customModule="Accounting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DRk-gY-fVu">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="$82.32" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONq-3Q-pfN">
-                                <rect key="frame" x="218.5" y="148.5" width="230" height="78"/>
+                                <rect key="frame" x="72.5" y="294.5" width="230" height="78"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="230" id="HP5-yC-wPO"/>
                                 </constraints>
@@ -314,7 +314,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPX-Wo-Its" customClass="HighlightedBackgroundButton" customModule="Accounting" customModuleProvider="target">
-                                <rect key="frame" x="283.5" y="311" width="100" height="34"/>
+                                <rect key="frame" x="137.5" y="603" width="100" height="34"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="ssL-Mk-AXq"/>
@@ -327,7 +327,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Result for today:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j87-bZ-4tl">
-                                <rect key="frame" x="257" y="89.5" width="153" height="29"/>
+                                <rect key="frame" x="111" y="235.5" width="153" height="29"/>
                                 <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -357,12 +357,12 @@
         <scene sceneID="SUb-yk-Zq1">
             <objects>
                 <viewController storyboardIdentifier="StatisticsDayView" id="YmN-vE-VaZ" customClass="StatisticsDayViewController" customModule="Accounting" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="K1K-wa-1qO">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                    <view key="view" contentMode="scaleToFill" id="K1K-wa-1qO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" layoutMarginsFollowReadableWidth="YES" text="10/10/2018" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyc-bU-yq8">
-                                <rect key="frame" x="258.5" y="58" width="150" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="10/10/2018" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyc-bU-yq8">
+                                <rect key="frame" x="112.5" y="58" width="150" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="4d9-0M-9hH"/>
                                 </constraints>
@@ -370,8 +370,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" layoutMarginsFollowReadableWidth="YES" text="Result: 8 hrs 31 min" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcD-h2-3Xz">
-                                <rect key="frame" x="197.5" y="393" width="272" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Result: 8 hrs 31 min" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcD-h2-3Xz">
+                                <rect key="frame" x="51.5" y="393" width="272" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="272" id="XRe-Fn-ypB"/>
                                 </constraints>
@@ -379,8 +379,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" layoutMarginsFollowReadableWidth="YES" text="$82.32" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yr-I3-DVJ">
-                                <rect key="frame" x="243.5" y="457" width="180" height="65"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="$82.32" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yr-I3-DVJ">
+                                <rect key="frame" x="97.5" y="457" width="180" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="zcQ-cp-Zk7"/>
                                 </constraints>
@@ -388,8 +388,8 @@
                                 <color key="textColor" red="0.26503805050000001" green="0.26503805050000001" blue="0.26503805050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" layoutMarginsFollowReadableWidth="YES" text="In:" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVF-g8-I82">
-                                <rect key="frame" x="241.5" y="187" width="77" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="In:" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVF-g8-I82">
+                                <rect key="frame" x="95.5" y="187" width="77" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="77" id="h5t-oN-huZ"/>
                                 </constraints>
@@ -397,8 +397,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cxG-av-vdC">
-                                <rect key="frame" x="326.5" y="187" width="97" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cxG-av-vdC">
+                                <rect key="frame" x="180.5" y="187" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="pZS-rs-X0p"/>
                                 </constraints>
@@ -406,14 +406,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" layoutMarginsFollowReadableWidth="YES" text="Break:" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93E-cz-lU7">
-                                <rect key="frame" x="241.5" y="230" width="77" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Break:" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93E-cz-lU7">
+                                <rect key="frame" x="95.5" y="230" width="77" height="29"/>
                                 <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aTt-vH-pKr">
-                                <rect key="frame" x="326.5" y="230" width="97" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aTt-vH-pKr">
+                                <rect key="frame" x="180.5" y="230" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="h2S-fC-8qG"/>
                                 </constraints>
@@ -421,14 +421,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" layoutMarginsFollowReadableWidth="YES" text="Out:" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKQ-Um-0Lb">
-                                <rect key="frame" x="241.5" y="273" width="77" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Out:" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKQ-Um-0Lb">
+                                <rect key="frame" x="95.5" y="273" width="77" height="29"/>
                                 <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XBX-Me-f8L">
-                                <rect key="frame" x="326.5" y="273" width="97" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XBX-Me-f8L">
+                                <rect key="frame" x="180.5" y="273" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="Fvi-gM-jSM"/>
                                 </constraints>
@@ -480,13 +480,13 @@
         <!--Statistics Weeks View Controller-->
         <scene sceneID="gUi-ro-ZEq">
             <objects>
-                <viewController id="17A-fE-nM2" customClass="StatisticsWeeksViewController" customModule="Accounting" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StatisticsWeeksViewController" id="17A-fE-nM2" customClass="StatisticsWeeksViewController" customModule="Accounting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JyF-kE-xq0">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="q4r-vc-OUL">
-                                <rect key="frame" x="83" y="50" width="500" height="190"/>
+                                <rect key="frame" x="-62.5" y="70" width="500" height="190"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jgm-5E-7U3">
                                         <rect key="frame" x="0.0" y="0.0" width="500" height="85"/>
@@ -510,7 +510,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJg-qh-8jL">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJg-qh-8jL">
                                                 <rect key="frame" x="104" y="0.0" width="84" height="85"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
@@ -529,7 +529,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWQ-VH-PEb">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWQ-VH-PEb">
                                                 <rect key="frame" x="208" y="0.0" width="84" height="85"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
@@ -548,7 +548,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6F-Jc-Pf6">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6F-Jc-Pf6">
                                                 <rect key="frame" x="312" y="0.0" width="84" height="85"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
@@ -567,7 +567,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8M-pr-Ebt">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8M-pr-Ebt">
                                                 <rect key="frame" x="416" y="0.0" width="84" height="85"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
@@ -591,7 +591,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZYM-cx-D9Q">
                                         <rect key="frame" x="0.0" y="105" width="500" height="85"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5U-z7-LNJ">
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5U-z7-LNJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="84" height="85"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
@@ -610,7 +610,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yf7-yq-Zpc">
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yf7-yq-Zpc">
                                                 <rect key="frame" x="104" y="0.0" width="84" height="85"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
@@ -629,7 +629,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqv-cO-mGh">
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqv-cO-mGh">
                                                 <rect key="frame" x="208" y="0.0" width="84" height="85"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
@@ -648,7 +648,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTT-rB-BZt">
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTT-rB-BZt">
                                                 <rect key="frame" x="312" y="0.0" width="84" height="85"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
@@ -667,7 +667,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bZ-Af-QAd">
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bZ-Af-QAd">
                                                 <rect key="frame" x="416" y="0.0" width="84" height="85"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
@@ -695,7 +695,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: 80 hrs 20 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAa-Ox-1mo">
-                                <rect key="frame" x="92" y="312.5" width="194" height="26.5"/>
+                                <rect key="frame" x="92" y="341" width="194" height="290"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="194" id="e9G-hO-MTH"/>
                                 </constraints>
@@ -704,7 +704,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Income: $860" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOR-Gr-9uR">
-                                <rect key="frame" x="433" y="312.5" width="150" height="26.5"/>
+                                <rect key="frame" x="141" y="332.5" width="150" height="298.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="YPy-Ul-qzk"/>
                                 </constraints>
@@ -726,6 +726,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wgw-FP-tTc"/>
                     </view>
+                    <connections>
+                        <outletCollection property="daysButtons" destination="XeG-6z-olG" collectionClass="NSMutableArray" id="YDK-jS-Qtt"/>
+                        <outletCollection property="daysButtons" destination="BJg-qh-8jL" collectionClass="NSMutableArray" id="r0t-0z-dDt"/>
+                        <outletCollection property="daysButtons" destination="oWQ-VH-PEb" collectionClass="NSMutableArray" id="Dkc-v2-ujA"/>
+                        <outletCollection property="daysButtons" destination="J6F-Jc-Pf6" collectionClass="NSMutableArray" id="sAe-9U-NfX"/>
+                        <outletCollection property="daysButtons" destination="h8M-pr-Ebt" collectionClass="NSMutableArray" id="xxM-Un-wQJ"/>
+                        <outletCollection property="daysButtons" destination="T5U-z7-LNJ" collectionClass="NSMutableArray" id="tPi-EX-o5l"/>
+                        <outletCollection property="daysButtons" destination="yf7-yq-Zpc" collectionClass="NSMutableArray" id="vGQ-QV-8yc"/>
+                        <outletCollection property="daysButtons" destination="eqv-cO-mGh" collectionClass="NSMutableArray" id="XMO-Bw-Aal"/>
+                        <outletCollection property="daysButtons" destination="MTT-rB-BZt" collectionClass="NSMutableArray" id="Lg6-5i-58X"/>
+                        <outletCollection property="daysButtons" destination="1bZ-Af-QAd" collectionClass="NSMutableArray" id="AFz-Pw-oxI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ud5-A1-cRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,10 +10,24 @@ import UIKit
 
 class StatisticsWeeksViewController: UIViewController {
 
+    @IBOutlet var daysButtons: [UIButton]!
+    
+    private(set) var calendar = IncomeCalendar.instance
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         // Do any additional setup after loading the view.
+    }
+    
+    func updateWeeks(with days: [Day]) {
+        // TODO: Add:
+        // updateDaysButtons()
+        // lalbelIncome.text = IncomeCalendar.calculateIncome(days)
+        // labelTime.text = IncomeCalendar.calculateTime(days)
     }
 
 }

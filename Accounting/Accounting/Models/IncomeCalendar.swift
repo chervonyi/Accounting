@@ -9,10 +9,15 @@
 import Foundation
 
 class IncomeCalendar {
+    // Vars:
     private(set) static var instance = IncomeCalendar()
     private(set) var days = [Day]()
     
+    // Conts:
+    private(set) static var workingDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
     static let salaryPerHour = 12
+    
+    // Properties:
     static var salaryPerMin: Double {
         return Double(salaryPerHour) / Double(60)
     }
@@ -27,49 +32,53 @@ class IncomeCalendar {
         return days.endIndex - 1
     }
     
-    private var workingDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+    var workingWeeks: [Day] {
+        // TODO - Continue from here
+        return [Day]()
+    }
     
+    // Constructor:
     fileprivate init() {
-        //clear()
+        clear()
         days = load()
         
         // Check if last day is today
         if days.count > 0 {
-            // TODO: Maybe should condition like: lastElement is today && lastElement is Finished
-            // Or set condition like: lastElement is Finished
-            if Calendar.current.isDate(Date(), inSameDayAs: days.last!.date) {
-                appendNewDay(withDate: getNextDate())
+            // When today is last day of working-weeks (Friday) && this day is Finished
+            if Calendar.current.isDate(Date(), inSameDayAs: days.last!.date), days.last!.isFinished {
+                appendNewWeeks(from: getDate(from: Date(), step: 1))
             }
         } else {
-            appendNewDay(withDate: getNextDate())
+            // Very first run
+            var startWeeks = Date()
+            
+            // Find prev first day of wokring week (Monday)
+            while startWeeks.dayOfWeek() != IncomeCalendar.workingDays[0] {
+                startWeeks = getDate(from: startWeeks, step: -1)
+            }
+            
+            appendNewWeeks(from: startWeeks)
         }
     }
     
-    func appendNewDay(withDate date: Date) {
-        days.append(Day(date))
+    // Push 10 working days.
+    // For first day (Monday) sets true to 'isWeekStart'
+    func appendNewWeeks(from date: Date) {
+        var newDate = date
+        let firstMonday = Day(newDate)
+        firstMonday.isWeekStart = true
+        days.append(firstMonday)
+        
+        // Append 9 new working days
+        for _ in 1...9 {
+            newDate = getDate(from: newDate, step: 1)
+            days.append(Day(newDate))
+        }
+        
         save(days: days)
     }
-    
-    func testFill() {
-        var day = Day(getNextDate())
-        day.timeIn = "10:00 AM"
-        day.timeOut = "05:20 PM"
-        day.breakDuration = 15
-        days.append(day)
-       
-        day = Day(getNextDate())
-        day.timeIn = "09:20 AM"
-        day.timeOut = "05:00 PM"
-        day.breakDuration = 45
-        days.append(day)
-    
-        day = Day(getNextDate())
-        day.timeIn = "10:20 AM"
-        day.timeOut = "06:00 PM"
-        day.breakDuration = 0
-        days.append(day)
-    }
-    
+
+    // Data-methods:
     func save(days: [Day]) {
         let userDefaults = UserDefaults.standard
         let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: days)
@@ -92,15 +101,15 @@ class IncomeCalendar {
         UserDefaults.standard.removeObject(forKey: "days")
     }
     
-    // Returns a next-working-date from the last day in 'days'.
-    func getNextDate() -> Date {
-        var nextDay = days.last != nil ? Calendar.current.date(byAdding: .day, value: 1, to: days.last!.date)! : Date()
+    // Supporting methods:
+    func getDate(from date: Date?, step value: Int) -> Date {
+        var newDate = date != nil ? Calendar.current.date(byAdding: .day, value: value, to: date!)! : Date()
         
-        while !workingDays.contains(nextDay.dayOfWeek()) {
-            nextDay = Calendar.current.date(byAdding: .day, value: 1, to: nextDay)!
+        while !IncomeCalendar.workingDays.contains(newDate.dayOfWeek()) {
+            newDate = Calendar.current.date(byAdding: .day, value: value, to: newDate)!
         }
         
-        return nextDay
+        return newDate
     }
 }
 

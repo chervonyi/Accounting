@@ -53,21 +53,17 @@ class StatisticsDayViewController: UIViewController {
             let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
             let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
             leftSwipe.direction = .left
+            let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
+            downSwipe.direction = .down
             
             view.addGestureRecognizer(rightSwipe)
             view.addGestureRecognizer(leftSwipe)
+            view.addGestureRecognizer(downSwipe)
         }
     }
     
-    // Rotaion
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        if UIDevice.current.orientation.isLandscape {
-            print("Landscape")
-            //let newViewController = NewViewController()
-            //self.navigationController?.pushViewController(newViewController, animated: true)
-        } else {
-            print("Portrait")
-        }
+    override open var shouldAutorotate: Bool {
+        return false
     }
     
     // Swipe
@@ -85,6 +81,15 @@ class StatisticsDayViewController: UIViewController {
                     selectedDayIndex += 1
                     fillInfo(about: calendar.days[selectedDayIndex])
                 }
+                
+            case .down:
+                let value = UIInterfaceOrientation.landscapeRight.rawValue
+                UIDevice.current.setValue(value, forKey: "orientation")
+                
+                // TODO: Remove moving to another View via Button
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "StatisticsWeeksViewController") as! StatisticsWeeksViewController
+                self.present(newViewController, animated: true, completion: nil)
                 
             default:
                 break
