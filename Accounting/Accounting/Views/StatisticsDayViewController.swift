@@ -26,10 +26,10 @@ class StatisticsDayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set portrait orientation
         let value = UIInterfaceOrientation.portrait.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
-        
-        
+
         // Settings for both types of pickers
         timePicker.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         timePicker.datePickerMode = .time
@@ -63,16 +63,7 @@ class StatisticsDayViewController: UIViewController {
         }
     }
     
-    override open var shouldAutorotate: Bool {
-        return false
-    }
-    
-    @IBAction func onClickFullStatistics(_ sender: UIButton) {
-//        let value = UIInterfaceOrientation.landscapeRight.rawValue
-//        UIDevice.current.setValue(value, forKey: "orientation")
-    }
-    
-    // Swipe
+    // Swipe handler
     @objc func handleSwipe(sender: UISwipeGestureRecognizer) {
         if sender.state == .ended {
             switch sender.direction {
@@ -106,7 +97,7 @@ class StatisticsDayViewController: UIViewController {
         
         inputTextBreak.text = transformDuration(day.breakDuration)
         
-        updateResult(with: day)
+        updateResultLabels(with: day)
     }
     
     // Puts 'Done' button on top of the TimePicker panel
@@ -151,14 +142,16 @@ class StatisticsDayViewController: UIViewController {
     // Common base listener
     func onChange(at textField: UITextField, with: String, day: Day) {
         textField.text = with
-        updateResult(with: day)
+        updateResultLabels(with: day)
         view.endEditing(true)
         
         // Save data
         calendar.save(days: calendar.days)
     }
     
-    // Supporting methods:
+    // Other supporting methods:
+    // Transform duration from String to Int
+    // E-g: "1 hour" -> 60, "25 min" -> 25
     static func transformDuration(_ duration: String) -> Int {
         let parts = duration.components(separatedBy: " ")
         if parts.count > 1  {
@@ -170,6 +163,8 @@ class StatisticsDayViewController: UIViewController {
         return 0
     }
     
+    // Transform duration from Int to String
+    // E-g: 60 -> "1 hour", 25 -> "25 min"
     func transformDuration(_ duration: Int) -> String {
         if duration == 60 {
             return "1 hour"
@@ -178,7 +173,9 @@ class StatisticsDayViewController: UIViewController {
         }
     }
     
-    func updateResult(with day: Day) {
+    // Update time and income labels with fresh data.
+    // If data is bad sets "Result: ?" and "$?"
+    func updateResultLabels(with day: Day) {
         if day.isFinished {
             let strTime = StatisticsDayViewController.makeWokringTime(with: day.workingTimeInMinutes)
             labelResult.text = "Result: \(strTime)"
@@ -202,10 +199,8 @@ class StatisticsDayViewController: UIViewController {
         return timeFormatter.string(from: timePicker.date)
     }
     
-    @objc func viewTaped(gestureRecognizer: UITapGestureRecognizer) {
-        view.endEditing(true)
-    }
-    
+    // Make string-time base on minutes.
+    // E-g: 100 min -> "1 hrs 40 min"
     static func makeWokringTime(with time: Int) -> String {
         var minutes = time
         let hrs = Int(minutes / 60)
@@ -216,10 +211,22 @@ class StatisticsDayViewController: UIViewController {
         }
         return "\(hrs) hrs"
     }
+ 
+    // Hides UIDatePicker and UIPicker on a usual touch
+    @objc func viewTaped(gestureRecognizer: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
+    // Turn off rotation
+    override open var shouldAutorotate: Bool {
+        return false
+    }
     
 }
 
 extension Double {
+    // Returns true if numbers are like: 12.0, 5.0, 51.0 etc
+    // Returns false in other cases, like: 11.1, 4.9, 2.5, etc
     var isPotentialInt: Bool {
         return self.truncatingRemainder(dividingBy: 1) == 0
     }

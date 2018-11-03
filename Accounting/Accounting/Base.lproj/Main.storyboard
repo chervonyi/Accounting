@@ -433,7 +433,6 @@
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="onClickFullStatistics:" destination="YmN-vE-VaZ" eventType="touchUpInside" id="9vT-Bs-PpW"/>
                                     <segue destination="17A-fE-nM2" kind="show" id="rn7-ER-qiw"/>
                                 </connections>
                             </button>

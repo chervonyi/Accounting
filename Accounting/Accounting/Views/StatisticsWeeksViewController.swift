@@ -16,7 +16,7 @@ class StatisticsWeeksViewController: UIViewController {
     
     private(set) var calendar = IncomeCalendar.instance
     
-    // 0th weeks' pair, 1st weeks' pair, 2nd weeks pair, etc
+    // 0th weeks pair, 1st weeks pair, 2nd weeks pair, etc
     private lazy var numberOfWeeks = calendar.startWeeksIndices.endIndex - 1
     
     // 0, 10, 20, etc
@@ -29,7 +29,8 @@ class StatisticsWeeksViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        // Set landscape orientation
         let value = UIInterfaceOrientation.landscapeRight.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
 
@@ -50,12 +51,10 @@ class StatisticsWeeksViewController: UIViewController {
     }
     
     @IBAction func onClickDayButton(_ sender: UIButton) {
-        //let value = UIInterfaceOrientation.portrait.rawValue
-        //UIDevice.current.setValue(value, forKey: "orientation")
-        
         performSegue(withIdentifier: "MoveToDay", sender: sender)
     }
     
+    // Show StatisticsDayView with appropriate selected day
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "MoveToDay" {
             if let statisticsDayView = segue.destination as? StatisticsDayViewController,
@@ -66,6 +65,11 @@ class StatisticsWeeksViewController: UIViewController {
                 statisticsDayView.selectedDayIndex = generalIndex
             }
         }
+    }
+    
+    // Turn off rotation
+    override open var shouldAutorotate: Bool {
+        return false
     }
 }
 
