@@ -11,6 +11,7 @@ import UIKit
 class StatisticsWeeksViewController: UIViewController {
 
     @IBOutlet var daysButtons: [UIButton]!
+    @IBOutlet var dateLabels: [UILabel]!
     @IBOutlet weak var labelTime: UILabel!
     @IBOutlet weak var labelIncome: UILabel!
     
@@ -30,10 +31,12 @@ class StatisticsWeeksViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         // Set landscape orientation
         let value = UIInterfaceOrientation.landscapeRight.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
 
+        
         for index in daysButtons.indices {
             let day = days[index]
             daysButtons[index].setTitle("$\(Int(day.salary))", for: UIControlState.normal)
@@ -48,6 +51,7 @@ class StatisticsWeeksViewController: UIViewController {
     
         labelTime.text = "Time: \(StatisticsDayViewController.makeWokringTime(with: totalMinutes))"
         labelIncome.text = "Income: $\(totalSalary)"
+        
     }
     
     @IBAction func onClickDayButton(_ sender: UIButton) {

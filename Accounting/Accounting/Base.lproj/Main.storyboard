@@ -428,7 +428,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCc-ZN-QnP" customClass="HighlightedFontButton" customModule="Accounting" customModuleProvider="target">
-                                <rect key="frame" x="133" y="613" width="108" height="34"/>
+                                <rect key="frame" x="133.5" y="613" width="108" height="34"/>
                                 <state key="normal" title="Full Statistics">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -437,7 +437,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Result: 8 hrs 31 min" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcD-h2-3Xz">
-                                <rect key="frame" x="51" y="369" width="272" height="29"/>
+                                <rect key="frame" x="51.5" y="369" width="272" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="272" id="XRe-Fn-ypB"/>
                                 </constraints>
@@ -496,17 +496,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="q4r-vc-OUL">
-                                <rect key="frame" x="-62.5" y="70" width="500" height="190"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: 80 hrs 20 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAa-Ox-1mo">
+                                <rect key="frame" x="93" y="575" width="191" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Income: $860" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOR-Gr-9uR">
+                                <rect key="frame" x="155.5" y="575" width="135.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="epM-tf-F8L">
+                                <rect key="frame" x="-87.5" y="238.5" width="550" height="110"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jgm-5E-7U3">
-                                        <rect key="frame" x="0.0" y="0.0" width="500" height="85"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="kYF-oN-p9P">
+                                        <rect key="frame" x="0.0" y="0.0" width="550" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/10/18" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZl-BA-ymZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="64.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/11/18" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftD-mk-qqh">
+                                                <rect key="frame" x="122.5" y="0.0" width="61.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/12/18" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KV-6w-sIC">
+                                                <rect key="frame" x="241.5" y="0.0" width="64" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/13/18" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2B-9k-HcM">
+                                                <rect key="frame" x="363.5" y="0.0" width="64.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/14/18" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vi0-tJ-Nh0">
+                                                <rect key="frame" x="485.5" y="0.0" width="64.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="aCu-dg-bcz">
+                                        <rect key="frame" x="0.0" y="40.5" width="550" height="69.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeG-6z-olG">
-                                                <rect key="frame" x="0.0" y="0.0" width="84" height="85"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="69.5"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                <state key="normal" title="$98">
+                                                <state key="normal" title="$91">
                                                     <color key="titleColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -525,10 +572,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJg-qh-8jL">
-                                                <rect key="frame" x="104" y="0.0" width="84" height="85"/>
+                                                <rect key="frame" x="120" y="0.0" width="70" height="69.5"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                <state key="normal" title="$98">
+                                                <state key="normal" title="$92">
                                                     <color key="titleColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -547,10 +594,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWQ-VH-PEb">
-                                                <rect key="frame" x="208" y="0.0" width="84" height="85"/>
+                                                <rect key="frame" x="240" y="0.0" width="70" height="69.5"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                <state key="normal" title="$98">
+                                                <state key="normal" title="$93">
                                                     <color key="titleColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -569,10 +616,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6F-Jc-Pf6">
-                                                <rect key="frame" x="312" y="0.0" width="84" height="85"/>
+                                                <rect key="frame" x="360" y="0.0" width="70" height="69.5"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                <state key="normal" title="$98">
+                                                <state key="normal" title="$94">
                                                     <color key="titleColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -591,10 +638,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8M-pr-Ebt">
-                                                <rect key="frame" x="416" y="0.0" width="84" height="85"/>
+                                                <rect key="frame" x="480" y="0.0" width="70" height="69.5"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                <state key="normal" title="$98">
+                                                <state key="normal" title="$95">
                                                     <color key="titleColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -614,172 +661,37 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZYM-cx-D9Q">
-                                        <rect key="frame" x="0.0" y="105" width="500" height="85"/>
-                                        <subviews>
-                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5U-z7-LNJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="84" height="85"/>
-                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                <state key="normal" title="$98">
-                                                    <color key="titleColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <integer key="value" value="16"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                        <integer key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="onClickDayButton:" destination="17A-fE-nM2" eventType="touchUpInside" id="PGu-RY-jvs"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yf7-yq-Zpc">
-                                                <rect key="frame" x="104" y="0.0" width="84" height="85"/>
-                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                <state key="normal" title="$98">
-                                                    <color key="titleColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <integer key="value" value="16"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                        <integer key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="onClickDayButton:" destination="17A-fE-nM2" eventType="touchUpInside" id="55X-bH-iWL"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqv-cO-mGh">
-                                                <rect key="frame" x="208" y="0.0" width="84" height="85"/>
-                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                <state key="normal" title="$98">
-                                                    <color key="titleColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <integer key="value" value="16"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                        <integer key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="onClickDayButton:" destination="17A-fE-nM2" eventType="touchUpInside" id="hUj-tx-4T4"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTT-rB-BZt">
-                                                <rect key="frame" x="312" y="0.0" width="84" height="85"/>
-                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                <state key="normal" title="$98">
-                                                    <color key="titleColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <integer key="value" value="16"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                        <integer key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="onClickDayButton:" destination="17A-fE-nM2" eventType="touchUpInside" id="0bz-eX-Bev"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bZ-Af-QAd">
-                                                <rect key="frame" x="416" y="0.0" width="84" height="85"/>
-                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                <state key="normal" title="$98">
-                                                    <color key="titleColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <integer key="value" value="16"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                        <integer key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="onClickDayButton:" destination="17A-fE-nM2" eventType="touchUpInside" id="qU7-B2-RBh"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="500" id="OWr-bN-q8x"/>
-                                    <constraint firstAttribute="height" constant="190" id="so1-dC-d6e"/>
+                                    <constraint firstAttribute="width" constant="550" id="K2K-Mq-aCf"/>
+                                    <constraint firstAttribute="height" constant="110" id="Tvi-HN-NGx"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: 80 hrs 20 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAa-Ox-1mo">
-                                <rect key="frame" x="92" y="341" width="194" height="290"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="194" id="e9G-hO-MTH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Income: $860" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOR-Gr-9uR">
-                                <rect key="frame" x="141" y="332.5" width="150" height="298.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="YPy-Ul-qzk"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TAa-Ox-1mo" firstAttribute="leading" secondItem="wgw-FP-tTc" secondAttribute="leading" constant="92" id="1Lm-0I-4J7"/>
+                            <constraint firstItem="TAa-Ox-1mo" firstAttribute="leading" secondItem="wgw-FP-tTc" secondAttribute="leading" constant="93" id="1Lm-0I-4J7"/>
                             <constraint firstItem="wgw-FP-tTc" firstAttribute="trailing" secondItem="BOR-Gr-9uR" secondAttribute="trailing" constant="84" id="1z3-bw-Q2X"/>
-                            <constraint firstItem="BOR-Gr-9uR" firstAttribute="top" relation="lessThanOrEqual" secondItem="q4r-vc-OUL" secondAttribute="bottom" constant="72.5" id="KeS-V3-xQb"/>
-                            <constraint firstItem="q4r-vc-OUL" firstAttribute="centerX" secondItem="JyF-kE-xq0" secondAttribute="centerX" id="ehf-fP-P9I"/>
-                            <constraint firstItem="q4r-vc-OUL" firstAttribute="top" secondItem="wgw-FP-tTc" secondAttribute="top" constant="50" id="ej9-Hv-lha"/>
-                            <constraint firstItem="wgw-FP-tTc" firstAttribute="bottom" secondItem="TAa-Ox-1mo" secondAttribute="bottom" constant="36" id="oU6-tu-YKw"/>
-                            <constraint firstItem="wgw-FP-tTc" firstAttribute="bottom" secondItem="BOR-Gr-9uR" secondAttribute="bottom" constant="36" id="pJ7-gM-zZ7"/>
-                            <constraint firstItem="TAa-Ox-1mo" firstAttribute="top" relation="lessThanOrEqual" secondItem="q4r-vc-OUL" secondAttribute="bottom" constant="81" id="xBS-rS-8rr"/>
+                            <constraint firstItem="epM-tf-F8L" firstAttribute="centerX" secondItem="JyF-kE-xq0" secondAttribute="centerX" id="YFM-Th-YmY"/>
+                            <constraint firstItem="epM-tf-F8L" firstAttribute="centerY" secondItem="JyF-kE-xq0" secondAttribute="centerY" constant="-40" id="e84-eg-OOs"/>
+                            <constraint firstItem="wgw-FP-tTc" firstAttribute="bottom" secondItem="TAa-Ox-1mo" secondAttribute="bottom" constant="65.5" id="oU6-tu-YKw"/>
+                            <constraint firstItem="wgw-FP-tTc" firstAttribute="bottom" secondItem="BOR-Gr-9uR" secondAttribute="bottom" constant="65.5" id="pJ7-gM-zZ7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wgw-FP-tTc"/>
                     </view>
                     <connections>
                         <outlet property="labelIncome" destination="BOR-Gr-9uR" id="1fS-7e-QZj"/>
                         <outlet property="labelTime" destination="TAa-Ox-1mo" id="hgU-00-2z7"/>
-                        <outletCollection property="daysButtons" destination="XeG-6z-olG" collectionClass="NSMutableArray" id="YDK-jS-Qtt"/>
-                        <outletCollection property="daysButtons" destination="BJg-qh-8jL" collectionClass="NSMutableArray" id="r0t-0z-dDt"/>
                         <outletCollection property="daysButtons" destination="oWQ-VH-PEb" collectionClass="NSMutableArray" id="Dkc-v2-ujA"/>
                         <outletCollection property="daysButtons" destination="J6F-Jc-Pf6" collectionClass="NSMutableArray" id="sAe-9U-NfX"/>
+                        <outletCollection property="daysButtons" destination="BJg-qh-8jL" collectionClass="NSMutableArray" id="r0t-0z-dDt"/>
                         <outletCollection property="daysButtons" destination="h8M-pr-Ebt" collectionClass="NSMutableArray" id="xxM-Un-wQJ"/>
-                        <outletCollection property="daysButtons" destination="T5U-z7-LNJ" collectionClass="NSMutableArray" id="tPi-EX-o5l"/>
-                        <outletCollection property="daysButtons" destination="yf7-yq-Zpc" collectionClass="NSMutableArray" id="vGQ-QV-8yc"/>
-                        <outletCollection property="daysButtons" destination="eqv-cO-mGh" collectionClass="NSMutableArray" id="XMO-Bw-Aal"/>
-                        <outletCollection property="daysButtons" destination="MTT-rB-BZt" collectionClass="NSMutableArray" id="Lg6-5i-58X"/>
-                        <outletCollection property="daysButtons" destination="1bZ-Af-QAd" collectionClass="NSMutableArray" id="AFz-Pw-oxI"/>
+                        <outletCollection property="daysButtons" destination="XeG-6z-olG" collectionClass="NSMutableArray" id="YDK-jS-Qtt"/>
+                        <outletCollection property="dateLabels" destination="QZl-BA-ymZ" collectionClass="NSMutableArray" id="auH-CN-apQ"/>
+                        <outletCollection property="dateLabels" destination="ftD-mk-qqh" collectionClass="NSMutableArray" id="5hQ-ol-GVf"/>
+                        <outletCollection property="dateLabels" destination="3KV-6w-sIC" collectionClass="NSMutableArray" id="YNx-Ny-hft"/>
+                        <outletCollection property="dateLabels" destination="a2B-9k-HcM" collectionClass="NSMutableArray" id="rxd-Os-rR1"/>
+                        <outletCollection property="dateLabels" destination="vi0-tJ-Nh0" collectionClass="NSMutableArray" id="PsB-pR-gmq"/>
                         <segue destination="YmN-vE-VaZ" kind="show" identifier="MoveToDay" id="Xdw-dQ-Q2i"/>
                     </connections>
                 </viewController>
@@ -789,7 +701,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LVH-aA-Jvn"/>
+        <segue reference="Xdw-dQ-Q2i"/>
         <segue reference="naJ-DT-KZM"/>
     </inferredMetricsTieBreakers>
 </document>
