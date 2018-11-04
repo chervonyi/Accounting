@@ -701,6 +701,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="rn7-ER-qiw"/>
         <segue reference="Xdw-dQ-Q2i"/>
         <segue reference="naJ-DT-KZM"/>
     </inferredMetricsTieBreakers>

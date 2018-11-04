@@ -88,10 +88,9 @@ class IncomeCalendar {
     // For first day (Monday) sets true to 'isWeekStart'
     func appendNewWeek(from date: Date) {
         var newDate = date
-        let firstMonday = Day(newDate)
-        firstMonday.isWeekStart = true
-        days.append(firstMonday)
-        
+
+        days.append(Day(newDate))
+
         // Append new working days
         for _ in 1..<countWokringDays {
             newDate = getDate(from: newDate, step: 1)

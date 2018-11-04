@@ -35,6 +35,18 @@ class StatisticsWeekViewController: UIViewController {
         let value = UIInterfaceOrientation.landscapeRight.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
 
+        updateFrame()
+        
+        // Swipe
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action:  #selector(handleSwipe(sender:)))
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action:  #selector(handleSwipe(sender:)))
+        leftSwipe.direction = .left
+        
+        view.addGestureRecognizer(rightSwipe)
+        view.addGestureRecognizer(leftSwipe)
+    }
+    
+    func updateFrame() {
         for index in daysButtons.indices {
             let day = days[index]
             daysButtons[index].setTitle("$\(Int(day.salary))", for: UIControlState.normal)
@@ -47,10 +59,32 @@ class StatisticsWeekViewController: UIViewController {
         
         let totalMinutes = IncomeCalendar.calculateTotalTime(for: days)
         let totalSalary = IncomeCalendar.calculateTotalIncome(for: days)
-    
+        
         labelTime.text = "Time: \(StatisticsDayViewController.makeWokringTime(with: totalMinutes))"
         labelIncome.text = "Income: $\(totalSalary)"
         
+    }
+    
+    @objc func handleSwipe(sender: UISwipeGestureRecognizer) {
+        if sender.state == .ended {
+            switch sender.direction {
+            case .right:
+                if numberOfWeeks > 0 {
+                    numberOfWeeks -= 1
+                    days = calendar.getWorkingWeek(withStartWeek: weeksStartIndex)
+                    updateFrame()
+                }
+                
+            case .left:
+                if numberOfWeeks < calendar.startWeeksIndices.endIndex - 1 {
+                    numberOfWeeks += 1
+                    days = calendar.getWorkingWeek(withStartWeek: weeksStartIndex)
+                    updateFrame()
+                }
+                
+            default: break
+            }
+        }
     }
     
     @IBAction func onClickDayButton(_ sender: UIButton) {

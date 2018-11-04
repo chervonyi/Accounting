@@ -13,7 +13,6 @@ class Day: NSObject, NSCoding {
     var timeIn: String? = nil
     var timeOut: String? = nil
     var breakDuration: Int
-    var isWeekStart = false
     private(set) var date: Date
     
     // Properties:
@@ -22,6 +21,10 @@ class Day: NSObject, NSCoding {
             return true
         }
         return false
+    }
+    
+    var isWeekStart: Bool {
+        return IncomeCalendar.workingDays.first! == date.dayOfWeek()
     }
     
     var workingTimeInMinutes: Int {
@@ -44,12 +47,11 @@ class Day: NSObject, NSCoding {
         breakDuration = 0
     }
     
-    init(_ date: Date, _ timeIn: String?, _ timeOut: String?, _ breakDuration: Int, _ isWeekStart: Bool) {
+    init(_ date: Date, _ timeIn: String?, _ timeOut: String?, _ breakDuration: Int) {
         self.date = date
         self.timeIn = timeIn
         self.timeOut = timeOut
         self.breakDuration = breakDuration
-        self.isWeekStart = isWeekStart
     }
     
     // Methods for saving instance of class
@@ -58,7 +60,6 @@ class Day: NSObject, NSCoding {
         aCoder.encode(timeIn, forKey: "timeIn")
         aCoder.encode(timeOut, forKey: "timeOut")
         aCoder.encode(breakDuration, forKey: "breakDuration")
-        aCoder.encode(isWeekStart, forKey: "isWeekStart")
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
@@ -66,8 +67,7 @@ class Day: NSObject, NSCoding {
         let timeIn = aDecoder.decodeObject(forKey: "timeIn") as? String
         let timeOut = aDecoder.decodeObject(forKey: "timeOut") as? String
         let breakDuration = aDecoder.decodeInteger(forKey: "breakDuration")
-        let isWeekStart = aDecoder.decodeBool(forKey: "isWeekStart")
-        self.init(date, timeIn, timeOut, breakDuration, isWeekStart)
+        self.init(date, timeIn, timeOut, breakDuration)
     }
     
     private func getMinutes(_ time: String) -> Int {
