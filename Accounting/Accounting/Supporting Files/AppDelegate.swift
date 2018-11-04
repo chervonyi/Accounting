@@ -16,17 +16,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let calendar = IncomeCalendar.instance
-        let day = calendar.days[calendar.todayIndex]
-        
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         var initialViewController: UIViewController
-        if day.timeIn == nil  {
-            initialViewController = mainStoryboard.instantiateViewController(withIdentifier: "StartNewWorkingDayView") as! StartNewWorkingDayViewController
-        } else if day.timeIn != nil, day.timeOut == nil {
-            initialViewController = mainStoryboard.instantiateViewController(withIdentifier: "EndWorkingDayView") as! EndWorkingDayViewController
+        
+        let calendar = IncomeCalendar.instance
+        let todayDate = Date()
+        
+        if IncomeCalendar.workingDays.contains(todayDate.dayOfWeek()) {
+            // Today is workign day
+            let today = calendar.days[calendar.todayIndex]
+            
+            if today.timeIn == nil {
+                initialViewController = mainStoryboard.instantiateViewController(withIdentifier: "StartNewWorkingDayView") as! StartNewWorkingDayViewController
+            } else if today.timeIn != nil, today.timeOut == nil {
+                initialViewController = mainStoryboard.instantiateViewController(withIdentifier: "EndWorkingDayView") as! EndWorkingDayViewController
+            } else {
+                initialViewController = mainStoryboard.instantiateViewController(withIdentifier: "StatisticsDayView") as! StatisticsDayViewController
+            }
+            
         } else {
+            // Today is weekend
             initialViewController = mainStoryboard.instantiateViewController(withIdentifier: "StatisticsDayView") as! StatisticsDayViewController
         }
         

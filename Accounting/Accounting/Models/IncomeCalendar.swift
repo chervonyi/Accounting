@@ -26,15 +26,22 @@ class IncomeCalendar {
         return IncomeCalendar.workingDays.count
     }
     
-    // Returns today's index. If is not found then returns index of the last item
-    // TODO: Improve method - if today's index will be not found - return index of nearest day
+    // Returns today's or if it not found - next working day's index
+    // If next working day is not found too, then returns index of last element
     var todayIndex: Int {
-        for index in days.indices {
-            if Calendar.current.isDate(Date(), inSameDayAs: days[index].date) {
-                return index
-            }
+        
+        // Find today
+        var index = getIndexOfDate(date: Date())
+        
+        if index != -1 {
+            return index
         }
-        return days.endIndex - 1
+        
+        // Find next working day from today
+        let nextWorkingDay = getDate(from: Date(), step: 1)
+        index = getIndexOfDate(date: nextWorkingDay)
+        
+        return index != -1 ? index : days.endIndex - 1
     }
     
     var startWeeksIndices: [Int] {
@@ -51,14 +58,14 @@ class IncomeCalendar {
     
     // Constructor:
     fileprivate init() {
-        clear()
+        //clear()
         days = load()
         
         // Check if last day is today
         if days.count > 0 {
             // When today is last day of working-weeks (Friday) && this day is Finished
             if Calendar.current.isDate(Date(), inSameDayAs: days.last!.date), days.last!.isFinished {
-                appendNewWeeks(from: getDate(from: Date(), step: 1))
+                appendNewWeek(from: getDate(from: Date(), step: 1))
             }
         } else {
             // On very first app run
@@ -73,13 +80,13 @@ class IncomeCalendar {
                 startWeek = getDate(from: startWeek, step: direction)
             }
             
-            appendNewWeeks(from: startWeek)
+            appendNewWeek(from: startWeek)
         }
     }
     
     // Push 5 working days.
     // For first day (Monday) sets true to 'isWeekStart'
-    func appendNewWeeks(from date: Date) {
+    func appendNewWeek(from date: Date) {
         var newDate = date
         let firstMonday = Day(newDate)
         firstMonday.isWeekStart = true
@@ -138,6 +145,18 @@ class IncomeCalendar {
     
     static func calculateTotalTime(for days: [Day]) -> Int {
         return days.reduce(0, {$0 + $1.workingTimeInMinutes})
+    }
+    
+    // Returns index of necessary date in days: [Day].
+    // If it is not found then returns -1
+    func getIndexOfDate(date: Date) -> Int {
+        for index in days.indices {
+            if Calendar.current.isDate(date, inSameDayAs: days[index].date) {
+                return index
+            }
+        }
+        
+        return -1
     }
     
 }
