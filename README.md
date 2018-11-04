@@ -46,3 +46,14 @@ _**Task:**_ Create a simple application to calculate your income. The result per
 
 #### v.1.1.2 - 11/02/2018
 * The action of a swipe down have been moved to a separate button
+
+#### v.1.1.3 - 11/02/2018
+* Fixed bug with rotation
+
+#### v.1.2.0 - 11/03/2018
+* Redesigned a view of StatisticsWeek
+* Redesigned logic of StatisticsWeek
+
+#### v.1.2.1 - 11/04/2018
+* Fixed bugs
+* Solved problem with running program on weekends
