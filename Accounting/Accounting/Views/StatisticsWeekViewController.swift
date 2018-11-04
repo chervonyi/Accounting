@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StatisticsWeeksViewController: UIViewController {
+class StatisticsWeekViewController: UIViewController {
 
     @IBOutlet var daysButtons: [UIButton]!
     @IBOutlet var dateLabels: [UILabel]!
@@ -17,29 +17,28 @@ class StatisticsWeeksViewController: UIViewController {
     
     private(set) var calendar = IncomeCalendar.instance
     
-    // 0th weeks pair, 1st weeks pair, 2nd weeks pair, etc
+    // 0th week, 1st week, 2nd week, etc
     private lazy var numberOfWeeks = calendar.startWeeksIndices.endIndex - 1
     
-    // 0, 10, 20, etc
+    // 0, 5, 10, etc
     private var weeksStartIndex: Int {
         return calendar.startWeeksIndices[numberOfWeeks]
     }
     
-    // [days[0]..<days[10]], [days[11]..<days[20]], etc
-    private(set) lazy var days = calendar.getWorkingWeeks(withStartWeeks: weeksStartIndex)
+    // [days[0]...days[5]], [days[6]...days[10]], etc
+    private(set) lazy var days = calendar.getWorkingWeek(withStartWeek: weeksStartIndex)
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         // Set landscape orientation
         let value = UIInterfaceOrientation.landscapeRight.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
 
-        
         for index in daysButtons.indices {
             let day = days[index]
             daysButtons[index].setTitle("$\(Int(day.salary))", for: UIControlState.normal)
+            dateLabels[index].text = "\(day.date.shortDate)"
             
             if Calendar.current.isDate(Date(), inSameDayAs: day.date) {
                 daysButtons[index].borderColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)

@@ -22,12 +22,7 @@ class StartNewWorkingDayViewController: UIViewController {
     
     @IBAction func onClickSubmit(_ sender: UIButton) {
         if calendar.days[calendar.todayIndex].timeIn == nil {
-            let timeFormatter = DateFormatter()
-            timeFormatter.dateStyle = .none
-            timeFormatter.timeStyle = .short
-            
-            calendar.days[calendar.todayIndex].timeIn = timeFormatter.string(for: Date())
-            
+            calendar.days[calendar.todayIndex].timeIn = Date().shortTime
             save(days: calendar.days)
         }
     }

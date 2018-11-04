@@ -22,7 +22,12 @@ class IncomeCalendar {
         return Double(salaryPerHour) / Double(60)
     }
     
+    var countWokringDays: Int {
+        return IncomeCalendar.workingDays.count
+    }
+    
     // Returns today's index. If is not found then returns index of the last item
+    // TODO: Improve method - if today's index will be not found - return index of nearest day
     var todayIndex: Int {
         for index in days.indices {
             if Calendar.current.isDate(Date(), inSameDayAs: days[index].date) {
@@ -46,7 +51,7 @@ class IncomeCalendar {
     
     // Constructor:
     fileprivate init() {
-        //clear()
+        clear()
         days = load()
         
         // Check if last day is today
@@ -56,19 +61,23 @@ class IncomeCalendar {
                 appendNewWeeks(from: getDate(from: Date(), step: 1))
             }
         } else {
-            // Very first run
-            var startWeeks = Date()
+            // On very first app run
+            var startWeek = Date()
             
-            // Find prev first day of wokring week (Monday)
-            while startWeeks.dayOfWeek() != IncomeCalendar.workingDays[0] {
-                startWeeks = getDate(from: startWeeks, step: -1)
+            // If today is working day then week will be created from prev monday (-1)
+            // Else - week wil be created from next monday (+1)
+            let direction = IncomeCalendar.workingDays.contains(startWeek.dayOfWeek()) ? -1 : 1
+        
+            // Step by step (adding or subtracting) date finds appropriate Monday
+            while startWeek.dayOfWeek() != IncomeCalendar.workingDays[0] {
+                startWeek = getDate(from: startWeek, step: direction)
             }
             
-            appendNewWeeks(from: startWeeks)
+            appendNewWeeks(from: startWeek)
         }
     }
     
-    // Push 10 working days.
+    // Push 5 working days.
     // For first day (Monday) sets true to 'isWeekStart'
     func appendNewWeeks(from date: Date) {
         var newDate = date
@@ -76,8 +85,8 @@ class IncomeCalendar {
         firstMonday.isWeekStart = true
         days.append(firstMonday)
         
-        // Append 9 new working days
-        for _ in 1...9 {
+        // Append new working days
+        for _ in 1..<countWokringDays {
             newDate = getDate(from: newDate, step: 1)
             days.append(Day(newDate))
         }
@@ -85,8 +94,8 @@ class IncomeCalendar {
         save(days: days)
     }
     
-    func getWorkingWeeks(withStartWeeks startIndex: Int) -> [Day] {
-        return Array(days[startIndex..<startIndex + 10])
+    func getWorkingWeek(withStartWeek startIndex: Int) -> [Day] {
+        return Array(days[startIndex..<startIndex + countWokringDays])
     }
 
     // Data-methods:

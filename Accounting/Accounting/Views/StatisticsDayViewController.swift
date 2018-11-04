@@ -192,11 +192,7 @@ class StatisticsDayViewController: UIViewController {
     }
     
     func getSelectedTime() -> String {
-        let timeFormatter = DateFormatter()
-        timeFormatter.dateStyle = .none
-        timeFormatter.timeStyle = .short
-
-        return timeFormatter.string(from: timePicker.date)
+        return timePicker.date.shortTime
     }
     
     // Make string-time base on minutes.

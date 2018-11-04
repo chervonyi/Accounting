@@ -488,10 +488,10 @@
             </objects>
             <point key="canvasLocation" x="2240.8000000000002" y="-30.134932533733135"/>
         </scene>
-        <!--Statistics Weeks View Controller-->
+        <!--Statistics Week View Controller-->
         <scene sceneID="gUi-ro-ZEq">
             <objects>
-                <viewController storyboardIdentifier="StatisticsWeeksViewController" id="17A-fE-nM2" customClass="StatisticsWeeksViewController" customModule="Accounting" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StatisticsWeeksViewController" id="17A-fE-nM2" customClass="StatisticsWeekViewController" customModule="Accounting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JyF-kE-xq0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -511,35 +511,35 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="epM-tf-F8L">
                                 <rect key="frame" x="-87.5" y="238.5" width="550" height="110"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="kYF-oN-p9P">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="kYF-oN-p9P">
                                         <rect key="frame" x="0.0" y="0.0" width="550" height="20.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/10/18" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZl-BA-ymZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="64.5" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/10/18" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZl-BA-ymZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/11/18" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftD-mk-qqh">
-                                                <rect key="frame" x="122.5" y="0.0" width="61.5" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/3/18" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftD-mk-qqh">
+                                                <rect key="frame" x="120" y="0.0" width="70" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/12/18" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KV-6w-sIC">
-                                                <rect key="frame" x="241.5" y="0.0" width="64" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/12/18" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KV-6w-sIC">
+                                                <rect key="frame" x="240" y="0.0" width="70" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/13/18" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2B-9k-HcM">
-                                                <rect key="frame" x="363.5" y="0.0" width="64.5" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/13/18" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2B-9k-HcM">
+                                                <rect key="frame" x="360" y="0.0" width="70" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/14/18" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vi0-tJ-Nh0">
-                                                <rect key="frame" x="485.5" y="0.0" width="64.5" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/14/18" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vi0-tJ-Nh0">
+                                                <rect key="frame" x="480" y="0.0" width="70" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -682,16 +682,16 @@
                     <connections>
                         <outlet property="labelIncome" destination="BOR-Gr-9uR" id="1fS-7e-QZj"/>
                         <outlet property="labelTime" destination="TAa-Ox-1mo" id="hgU-00-2z7"/>
-                        <outletCollection property="daysButtons" destination="oWQ-VH-PEb" collectionClass="NSMutableArray" id="Dkc-v2-ujA"/>
-                        <outletCollection property="daysButtons" destination="J6F-Jc-Pf6" collectionClass="NSMutableArray" id="sAe-9U-NfX"/>
-                        <outletCollection property="daysButtons" destination="BJg-qh-8jL" collectionClass="NSMutableArray" id="r0t-0z-dDt"/>
-                        <outletCollection property="daysButtons" destination="h8M-pr-Ebt" collectionClass="NSMutableArray" id="xxM-Un-wQJ"/>
-                        <outletCollection property="daysButtons" destination="XeG-6z-olG" collectionClass="NSMutableArray" id="YDK-jS-Qtt"/>
                         <outletCollection property="dateLabels" destination="QZl-BA-ymZ" collectionClass="NSMutableArray" id="auH-CN-apQ"/>
                         <outletCollection property="dateLabels" destination="ftD-mk-qqh" collectionClass="NSMutableArray" id="5hQ-ol-GVf"/>
                         <outletCollection property="dateLabels" destination="3KV-6w-sIC" collectionClass="NSMutableArray" id="YNx-Ny-hft"/>
                         <outletCollection property="dateLabels" destination="a2B-9k-HcM" collectionClass="NSMutableArray" id="rxd-Os-rR1"/>
                         <outletCollection property="dateLabels" destination="vi0-tJ-Nh0" collectionClass="NSMutableArray" id="PsB-pR-gmq"/>
+                        <outletCollection property="daysButtons" destination="XeG-6z-olG" collectionClass="NSMutableArray" id="8of-qY-lmI"/>
+                        <outletCollection property="daysButtons" destination="BJg-qh-8jL" collectionClass="NSMutableArray" id="feH-VX-myG"/>
+                        <outletCollection property="daysButtons" destination="oWQ-VH-PEb" collectionClass="NSMutableArray" id="v3G-Uo-mBn"/>
+                        <outletCollection property="daysButtons" destination="J6F-Jc-Pf6" collectionClass="NSMutableArray" id="uDl-Pc-7vC"/>
+                        <outletCollection property="daysButtons" destination="h8M-pr-Ebt" collectionClass="NSMutableArray" id="Kee-Qp-Mb1"/>
                         <segue destination="YmN-vE-VaZ" kind="show" identifier="MoveToDay" id="Xdw-dQ-Q2i"/>
                     </connections>
                 </viewController>

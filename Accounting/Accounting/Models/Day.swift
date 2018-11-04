@@ -23,7 +23,7 @@ class Day: NSObject, NSCoding {
         }
         return false
     }
-
+    
     var workingTimeInMinutes: Int {
         if timeIn == nil || timeOut == nil {
             return 0
@@ -98,6 +98,22 @@ extension String {
         let myNSString = self as NSString
         return myNSString.substring(with: NSRange(location: from, length: to - from))
         
+    }
+}
+
+extension Date {
+    var shortDate: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .none
+        return dateFormatter.string(from: self)
+    }
+    
+    var shortTime: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .none
+        dateFormatter.timeStyle = .short
+        return dateFormatter.string(from: self)
     }
 }
 

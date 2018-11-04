@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA350F5721892D8200C949AF /* StatisticsWeeksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA350F5621892D8200C949AF /* StatisticsWeeksViewController.swift */; };
+		DA350F5721892D8200C949AF /* StatisticsWeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA350F5621892D8200C949AF /* StatisticsWeekViewController.swift */; };
 		DA3B38FB21823F180056486B /* DurationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B38FA21823F180056486B /* DurationPickerView.swift */; };
 		DA3B3900218278510056486B /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B38FF218278510056486B /* Day.swift */; };
 		DA3B3904218286F60056486B /* IncomeCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B3903218286F60056486B /* IncomeCalendar.swift */; };
@@ -24,7 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DA350F5621892D8200C949AF /* StatisticsWeeksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatisticsWeeksViewController.swift; path = Views/StatisticsWeeksViewController.swift; sourceTree = "<group>"; };
+		DA350F5621892D8200C949AF /* StatisticsWeekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatisticsWeekViewController.swift; path = Views/StatisticsWeekViewController.swift; sourceTree = "<group>"; };
 		DA3B38FA21823F180056486B /* DurationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationPickerView.swift; sourceTree = "<group>"; };
 		DA3B38FF218278510056486B /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		DA3B3903218286F60056486B /* IncomeCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeCalendar.swift; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 				DA3B38FC218270070056486B /* Views */,
 				DA3B38FD218271050056486B /* Supporting Files */,
 				DAE9B0C5217E6BD300CE67C5 /* Main.storyboard */,
-				DA350F5621892D8200C949AF /* StatisticsWeeksViewController.swift */,
+				DA350F5621892D8200C949AF /* StatisticsWeekViewController.swift */,
 				DAE9B0CD217E6BD300CE67C5 /* Info.plist */,
 			);
 			path = Accounting;
@@ -208,7 +208,7 @@
 				DAFDE6C8217FDFC700AE8FFF /* BreakDurationViewController.swift in Sources */,
 				DAE9B0C2217E6BD300CE67C5 /* AppDelegate.swift in Sources */,
 				DAFDE6CA218027EB00AE8FFF /* StatisticsDayViewController.swift in Sources */,
-				DA350F5721892D8200C949AF /* StatisticsWeeksViewController.swift in Sources */,
+				DA350F5721892D8200C949AF /* StatisticsWeekViewController.swift in Sources */,
 				DAFDE6C4217FBF6500AE8FFF /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
