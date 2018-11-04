@@ -496,18 +496,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: 80 hrs 20 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAa-Ox-1mo">
-                                <rect key="frame" x="93" y="575" width="191" height="26.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Income: $860" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOR-Gr-9uR">
-                                <rect key="frame" x="155.5" y="575" width="135.5" height="26.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="epM-tf-F8L">
                                 <rect key="frame" x="-87.5" y="238.5" width="550" height="110"/>
                                 <subviews>
@@ -667,17 +655,53 @@
                                     <constraint firstAttribute="height" constant="110" id="Tvi-HN-NGx"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: 80 hrs 20 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAa-Ox-1mo">
+                                <rect key="frame" x="92" y="537" width="191" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Income: $860" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOR-Gr-9uR">
+                                <rect key="frame" x="120" y="579" width="135.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="TAa-Ox-1mo" firstAttribute="leading" secondItem="wgw-FP-tTc" secondAttribute="leading" constant="93" id="1Lm-0I-4J7"/>
                             <constraint firstItem="wgw-FP-tTc" firstAttribute="trailing" secondItem="BOR-Gr-9uR" secondAttribute="trailing" constant="84" id="1z3-bw-Q2X"/>
                             <constraint firstItem="epM-tf-F8L" firstAttribute="centerX" secondItem="JyF-kE-xq0" secondAttribute="centerX" id="YFM-Th-YmY"/>
+                            <constraint firstItem="TAa-Ox-1mo" firstAttribute="centerX" secondItem="JyF-kE-xq0" secondAttribute="centerX" id="dzP-Lo-5Mp"/>
                             <constraint firstItem="epM-tf-F8L" firstAttribute="centerY" secondItem="JyF-kE-xq0" secondAttribute="centerY" constant="-40" id="e84-eg-OOs"/>
+                            <constraint firstItem="wgw-FP-tTc" firstAttribute="bottom" secondItem="BOR-Gr-9uR" secondAttribute="bottom" constant="61.5" id="i2N-MG-Eey"/>
                             <constraint firstItem="wgw-FP-tTc" firstAttribute="bottom" secondItem="TAa-Ox-1mo" secondAttribute="bottom" constant="65.5" id="oU6-tu-YKw"/>
                             <constraint firstItem="wgw-FP-tTc" firstAttribute="bottom" secondItem="BOR-Gr-9uR" secondAttribute="bottom" constant="65.5" id="pJ7-gM-zZ7"/>
+                            <constraint firstItem="BOR-Gr-9uR" firstAttribute="centerX" secondItem="JyF-kE-xq0" secondAttribute="centerX" id="qRZ-R5-DMN"/>
+                            <constraint firstItem="BOR-Gr-9uR" firstAttribute="top" secondItem="TAa-Ox-1mo" secondAttribute="bottom" constant="15.5" id="wQd-1u-jfO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wgw-FP-tTc"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="i2N-MG-Eey"/>
+                                <exclude reference="dzP-Lo-5Mp"/>
+                                <exclude reference="qRZ-R5-DMN"/>
+                                <exclude reference="wQd-1u-jfO"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="1z3-bw-Q2X"/>
+                                <include reference="i2N-MG-Eey"/>
+                                <exclude reference="oU6-tu-YKw"/>
+                                <exclude reference="pJ7-gM-zZ7"/>
+                                <exclude reference="1Lm-0I-4J7"/>
+                                <include reference="dzP-Lo-5Mp"/>
+                                <include reference="qRZ-R5-DMN"/>
+                                <include reference="wQd-1u-jfO"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="labelIncome" destination="BOR-Gr-9uR" id="1fS-7e-QZj"/>
@@ -701,7 +725,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rn7-ER-qiw"/>
         <segue reference="Xdw-dQ-Q2i"/>
         <segue reference="naJ-DT-KZM"/>
     </inferredMetricsTieBreakers>
