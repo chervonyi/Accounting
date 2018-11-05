@@ -57,3 +57,12 @@ _**Task:**_ Create a simple application to calculate your income. The result per
 #### v.1.2.1 - 11/04/2018
 * Fixed bugs
 * Solved problem with running program on weekends
+
+#### v.1.2.2 - 11/04/2018
+* Allowed swipe on StatisticsWeek scene
+* Added icon
+
+#### v.1.3.0 [Beta] - 11/05/2018
+* Added StatisticsGraphView
+* Allowed drawing of graph
+* Redesigned StatisticsWeek
