@@ -14,6 +14,7 @@ class StatisticsWeekViewController: UIViewController {
     @IBOutlet var dateLabels: [UILabel]!
     @IBOutlet weak var labelTime: UILabel!
     @IBOutlet weak var labelIncome: UILabel!
+    @IBOutlet weak var buttonGraph: HighlightedBackgroundButton!
     
     private(set) var calendar = IncomeCalendar.instance
     
@@ -35,6 +36,8 @@ class StatisticsWeekViewController: UIViewController {
         let value = UIInterfaceOrientation.landscapeRight.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
 
+        buttonGraph.layer.cornerRadius = buttonGraph.frame.height / 2
+        
         updateFrame()
         
         // Swipe

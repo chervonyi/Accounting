@@ -58,7 +58,6 @@ class IncomeCalendar {
     
     // Constructor:
     fileprivate init() {
-        //clear()
         days = load()
         
         // Check if last day is today
@@ -121,10 +120,6 @@ class IncomeCalendar {
             return decodedDays
         }
         return [Day]()
-    }
-    
-    func clear() {
-        UserDefaults.standard.removeObject(forKey: "days")
     }
     
     // Supporting methods:

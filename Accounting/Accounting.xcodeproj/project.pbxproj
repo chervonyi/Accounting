@@ -11,6 +11,8 @@
 		DA3B38FB21823F180056486B /* DurationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B38FA21823F180056486B /* DurationPickerView.swift */; };
 		DA3B3900218278510056486B /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B38FF218278510056486B /* Day.swift */; };
 		DA3B3904218286F60056486B /* IncomeCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B3903218286F60056486B /* IncomeCalendar.swift */; };
+		DAA03BBF2190C9AA00148A26 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA03BBE2190C9AA00148A26 /* GraphView.swift */; };
+		DAA03BC12190CD1700148A26 /* StatisticsGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA03BC02190CD1700148A26 /* StatisticsGraphViewController.swift */; };
 		DAC373F22186877D0091DD9B /* CloseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC373F12186877D0091DD9B /* CloseViewController.swift */; };
 		DAE9B0C2217E6BD300CE67C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE9B0C1217E6BD300CE67C5 /* AppDelegate.swift */; };
 		DAE9B0C4217E6BD300CE67C5 /* StartNewWorkingDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE9B0C3217E6BD300CE67C5 /* StartNewWorkingDayViewController.swift */; };
@@ -30,6 +32,8 @@
 		DA3B3903218286F60056486B /* IncomeCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeCalendar.swift; sourceTree = "<group>"; };
 		DA3B39062182949C0056486B /* DayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTests.swift; sourceTree = "<group>"; };
 		DA3B3910218295810056486B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAA03BBE2190C9AA00148A26 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		DAA03BC02190CD1700148A26 /* StatisticsGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsGraphViewController.swift; sourceTree = "<group>"; };
 		DAC373F12186877D0091DD9B /* CloseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CloseViewController.swift; path = Accounting/Views/CloseViewController.swift; sourceTree = SOURCE_ROOT; };
 		DAE9B0BE217E6BD300CE67C5 /* Accounting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Accounting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE9B0C1217E6BD300CE67C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,12 +62,15 @@
 		DA3B38FC218270070056486B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DAA03BC02190CD1700148A26 /* StatisticsGraphViewController.swift */,
+				DAA03BBE2190C9AA00148A26 /* GraphView.swift */,
 				DAFDE6C9218027EB00AE8FFF /* StatisticsDayViewController.swift */,
 				DAFDE6C7217FDFC700AE8FFF /* BreakDurationViewController.swift */,
 				DAFDE6C3217FBF6500AE8FFF /* ResultViewController.swift */,
 				DAE9B0C3217E6BD300CE67C5 /* StartNewWorkingDayViewController.swift */,
 				DAFDE6C1217FA2D200AE8FFF /* EndWorkingDayViewController.swift */,
 				DA3B38FA21823F180056486B /* DurationPickerView.swift */,
+				DAC373F12186877D0091DD9B /* CloseViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -72,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				DAE9B0C1217E6BD300CE67C5 /* AppDelegate.swift */,
-				DAC373F12186877D0091DD9B /* CloseViewController.swift */,
 				DAE9B0C8217E6BD300CE67C5 /* Assets.xcassets */,
 				DAE9B0CA217E6BD300CE67C5 /* LaunchScreen.storyboard */,
 			);
@@ -205,11 +211,13 @@
 				DAE9B0C4217E6BD300CE67C5 /* StartNewWorkingDayViewController.swift in Sources */,
 				DA3B3904218286F60056486B /* IncomeCalendar.swift in Sources */,
 				DAC373F22186877D0091DD9B /* CloseViewController.swift in Sources */,
+				DAA03BC12190CD1700148A26 /* StatisticsGraphViewController.swift in Sources */,
 				DAFDE6C8217FDFC700AE8FFF /* BreakDurationViewController.swift in Sources */,
 				DAE9B0C2217E6BD300CE67C5 /* AppDelegate.swift in Sources */,
 				DAFDE6CA218027EB00AE8FFF /* StatisticsDayViewController.swift in Sources */,
 				DA350F5721892D8200C949AF /* StatisticsWeekViewController.swift in Sources */,
 				DAFDE6C4217FBF6500AE8FFF /* ResultViewController.swift in Sources */,
+				DAA03BBF2190C9AA00148A26 /* GraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

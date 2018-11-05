@@ -109,6 +109,10 @@ extension Date {
         return dateFormatter.string(from: self)
     }
     
+    var graphDate: String {
+        return String(self.shortDate.dropLast(3))
+    }
+    
     var shortTime: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .none
