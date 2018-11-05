@@ -4,6 +4,10 @@ _**Description:**_ Application which allow you to keep a record of working hours
 
 _**Task:**_ Create a simple application to calculate your income. The result per working day should be calculated automatically at the end of the working day. Salary per day will be calculated based on working hours. The start and end time of the working day will be recorded by clicking on just one button. **[Goal](https://i.imgur.com/zSermki.png)**
 
+_**Result:**_ [Screenshots](https://imgur.com/a/gTdhdEJ)
+
+_**Fair use:**_ Logic of drawing graphs - [CoreGraphicsGraph](https://github.com/tmdvs/CoreGraphicsGraph) by [Tim Davies](https://github.com/tmdvs)
+
 </br>
 
 ## Change Log
